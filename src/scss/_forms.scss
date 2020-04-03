@@ -1,0 +1,24 @@
+@use "@material/form-field/mdc-form-field";
+@use "@material/textfield/mdc-text-field";
+@use "@material/checkbox/mdc-checkbox";
+.w-100{
+  width: 100%;
+}
+.mdc-form-field-wrapper{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  --mdc-theme-primary: #1371EC;
+}
+.mdc-text-field-helper-line--error{
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 0;
+}
+.mdc-text-field--invalid~.mdc-text-field-helper-line--error{
+  height: auto;
+}
+.mdc-text-field--invalid~.mdc-text-field-helper-line>.mdc-text-field-helper-text--error{
+  color: #b00020;
+  color: var(--mdc-theme-error, #b00020);
+  opacity: 1;
+}

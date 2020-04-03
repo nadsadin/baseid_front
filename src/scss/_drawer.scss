@@ -1,0 +1,208 @@
+$surface-padding: 20px;
+@use "@material/drawer/variables" with($surface-padding: $surface-padding, $list-item-spacing: 1px);
+@use "@material/drawer/mixins" as MDCDrawer;
+@use "@material/icon-button/mixins" as MDCIconButton;
+@use "@material/drawer/mdc-drawer";
+@use "@material/list/mdc-list";
+$border: rgba(255,255,255,0);
+.mdc-drawer{
+  box-shadow: 0px 0px 50px rgba(205, 205, 205, 0.25);
+  @include MDCDrawer.border-color($border);
+  @include MDCDrawer.width(230px);
+  @include MDCDrawer.fill-color-accessible(#ffffff);
+  @include MDCDrawer.activated-overlay-color(#ffffff);
+  @include MDCDrawer.item-text-ink-color(#484848);
+  @include MDCDrawer.item-activated-text-ink-color(#000000);
+
+}
+.mdc-drawer__header{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.drawer-frame-root {
+  display: flex;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+.drawer-app-content {
+  flex: auto;
+  overflow: auto;
+}
+
+.drawer-main-content {
+  overflow: auto;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mdc-top-app-bar.drawer-top-app-bar {
+  width: var(--mdc-top-app-bar-width, 100%);
+  //position: absolute;
+}
+
+.drawer-frame-app-content {
+  position: relative;
+  width: 100%;
+  transform: translate(0, 0);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  //overflow-y: auto;
+  //-webkit-overflow-scrolling: touch;
+}
+.top-app-bar__scroll-target{
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mdc-drawer-list-item-fix{
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.mdc-drawer{
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  .mdc-list-section{
+    margin-top: 40px;
+    &__header{
+      margin-left: $surface-padding;
+      margin-right: $surface-padding/2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-title{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 10px;
+        color: #A7A7A7;
+      }
+      &-actions{
+        .mdc-icon-button{
+          @include MDCIconButton.icon-size(14px, 14px, 4px);
+          @include MDCIconButton.ink-color(#DEDEDE);
+        }
+      }
+    }
+    &__footer{
+      &-link{
+        text-decoration: none;
+        color: #b5b5b5;
+        display: block;
+        margin: 2px 8px;
+        padding: 0 10px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 24px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .mdc-list{
+    &-item{
+      &--plain{
+        font-weight: 300;
+        font-size: 14px;
+        height: 24px;
+        --mdc-theme-primary: #ffffff;
+        &.mdc-list-item--selected{
+          &:after{
+            background-color: #ffffff;
+          }
+          &:hover, &:active, &:focus{
+            background-color: #ffffff;
+          }
+        }
+        &.mdc-list-item--activated, &.mdc-list-item--selected{
+          font-weight: 500;
+          letter-spacing: 0.2px;
+          .mdc-list-item__graphic{
+            color: #212121;
+          }
+        }
+        &.mdc-list-item--disabled{
+          .mdc-list-item__graphic{
+            opacity: 0.6;
+          }
+        }
+        .mdc-list-item__graphic{
+          margin-right: 5px;
+          font-size: 13px;
+          width: 13px;
+          height: 13px;
+        }
+        .mdc-list-item__text:before{
+          //content: "# ";
+        }
+      }
+    }
+  }
+  .mdc-drawer__bottom-links{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 100px;
+    a{
+      display: block;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 24px;
+      color: #A7A7A7;
+      text-decoration: none;
+      &:hover, &:active, &:focus{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.logo-image-circle{
+  width: 38px;
+  height: 38px;
+  border-radius: 38px;
+}
+.logo-text{
+  margin-left: 8px;
+  &-company{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.2px;
+    color: #484848;
+  }
+  &-name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 130%;
+    letter-spacing: 0.2px;
+    color: #A7A7A7;
+    position: relative;
+    &.active{
+      padding-left: 9px;
+      &:before{
+        content: "";
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        background-color: #41E93E;
+        left: 0;
+        top: 4px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

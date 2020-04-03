@@ -1,0 +1,91 @@
+@use "@material/top-app-bar/mdc-top-app-bar.import" as MDCTopAppBar;
+@use "@material/icon-button/mdc-icon-button";
+@use "@material/button/mdc-button";
+
+.mdc-top-app-bar.mdc-top-app-bar--raised {
+  @include MDCTopAppBar.mdc-top-app-bar-fill-color-accessible(#FFFFFF);
+  @include MDCTopAppBar.mdc-top-app-bar-icon-ink-color(#C4C4C4);
+}
+.mdc-top-app-bar.mdc-top-app-bar--transparent {
+  @include MDCTopAppBar.mdc-top-app-bar-fill-color-accessible(transparent);
+  @include MDCTopAppBar.mdc-top-app-bar-icon-ink-color(#FFFFFF);
+}
+.mdc-top-app-bar.mdc-top-app-bar--transparent-light {
+  @include MDCTopAppBar.mdc-top-app-bar-fill-color-accessible(transparent);
+  @include MDCTopAppBar.mdc-top-app-bar-icon-ink-color(#C4C4C4);
+}
+.mdc-top-app-bar__logo, .mdc-top-app-bar__navigation-icon{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: block;
+  }
+  .mdc-top-app-bar__logo{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    text-decoration: none;
+  }
+}
+
+.mdc-top-app-bar{
+  .mdc-button{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    --mdc-typography-button-font-size: 13px;
+    --mdc-typography-button-text-transform: none;
+    &-light{
+      --mdc-theme-primary: #DEDEDE;
+    }
+    &-red{
+      --mdc-theme-primary: #D43F3F;
+    }
+    &-dark{
+      --mdc-theme-primary: #949494;
+    }
+    &__label{
+      &-light{
+        color: #A7A7A7;
+      }
+      &-red{
+        color: #D43F3F;
+      }
+      &-dark{
+        color: #949494;
+      }
+      &-blue{
+        color: #1371EC;
+      }
+      &-black{
+        color: #212121;
+      }
+    }
+  }
+  .mdc-icon-button{
+    color: #DEDEDE;
+  }
+}
+@media (max-width: 1200px) {
+  .hide-desktop{
+    display: none;
+  }
+}
+@media (max-width: 839px) {
+  .hide-tablet{
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .hide-mobile{
+    display: none;
+  }
+}
+@media (min-width: 1350px){
+  .mdc-top-app-bar{
+    padding-right: 150px;
+  }
+}

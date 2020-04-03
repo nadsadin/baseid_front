@@ -1,0 +1,15 @@
+$mdc-typography-color: #212121;
+$mdc-typography-styles-headline4: (
+        font-size: 28px,
+        font-weight: bold,
+        line-height: 25px,
+        color: #212121
+);
+$styles-button: (text-transform: none);
+$mdc-typography-button-text-transform: none;
+@import "@material/typography/mdc-typography";
+body{
+  margin: 0;
+  color: #212121;
+  --mdc-typography-button-text-transform: none;
+}

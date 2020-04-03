@@ -1,0 +1,49 @@
+@use "@material/card/mdc-card";
+@use "@material/elevation/mdc-elevation";
+
+.auth{
+  &-wrap{
+    width: 100%;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-inner{
+    padding: 16px;
+    width: 450px;
+    max-width: 100%;
+  }
+  &-card{
+    padding: 16px;
+    &__logo{
+      font-family: 'Questrial', sans-serif;
+      color: #1371EC;
+      font-size: 48px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    &__footer{
+      margin-top: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      &-text{
+        margin-top: 8px;
+        font-size: 0.75rem;
+        font-size: var(--mdc-typography-caption-font-size, 0.75rem);
+        line-height: 1.25rem;
+        line-height: var(--mdc-typography-caption-line-height, 1.25rem);
+        font-weight: 400;
+        font-weight: var(--mdc-typography-caption-font-weight, 400);
+        letter-spacing: 0.0333333333em;
+        letter-spacing: var(--mdc-typography-caption-letter-spacing, 0.0333333333em);
+      }
+    }
+  }
+}
