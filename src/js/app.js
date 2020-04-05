@@ -4,12 +4,15 @@ import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCDrawer} from "@material/drawer";
 import {MDCList} from "@material/list";
 import {MDCIconButtonToggle} from '@material/icon-button';
+import mdcAutoInit from '@material/auto-init';
+import {MDCTextField} from '@material/textfield';
 import './bootstrap';
 import './../img/logo.png';
 $(function() {
     console.log('Hello world');
 });
 
+mdcAutoInit.register('MDCTextField', MDCTextField);
 mdc.autoInit();
 // Select DOM elements
 

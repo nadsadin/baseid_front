@@ -23,7 +23,7 @@
     &__logo{
       font-family: 'Questrial', sans-serif;
       color: #1371EC;
-      font-size: 48px;
+      font-size: 34px;
       display: block;
       text-align: center;
       text-decoration: none;
@@ -50,6 +50,12 @@
     }
     .mdc-typography--headline4{
       margin-bottom: 16px;
+    }
+    .mdc-text-field-helper-line{
+      --mdc-typography-caption-font-size: 0.6rem;
+      .mdc-text-field-helper-text{
+        font-size: .6rem;
+      }
     }
     .mdc-button{
     }
