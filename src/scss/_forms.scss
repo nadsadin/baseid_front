@@ -9,9 +9,11 @@
   margin-bottom: 8px;
   --mdc-theme-primary: #1371EC;
 }
+.mdc-text-field + .mdc-text-field-helper-line{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .mdc-text-field-helper-line--error{
-  padding-left: 16px;
-  padding-right: 16px;
   height: 0;
 }
 .mdc-text-field--invalid~.mdc-text-field-helper-line--error{

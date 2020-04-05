@@ -10,6 +10,7 @@ $(function() {
     console.log('Hello world');
 });
 
+mdc.autoInit();
 // Select DOM elements
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
@@ -78,5 +79,3 @@ const icon_buttons = document.querySelectorAll(".mdc-icon-button");
 for(const icon_button of icon_buttons){
     new MDCIconButtonToggle(icon_button);
 }
-
-mdc.autoInit();

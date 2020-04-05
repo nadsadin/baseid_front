@@ -1,4 +1,5 @@
 @use "@material/top-app-bar/mdc-top-app-bar.import" as MDCTopAppBar;
+@use "@material/icon-button/mixins" as MDCIconButton;
 @use "@material/icon-button/mdc-icon-button";
 @use "@material/button/mdc-button";
 
@@ -35,11 +36,20 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 13px;
-    --mdc-typography-button-font-size: 13px;
+    font-size: 11px;
+    --mdc-typography-button-font-size: 11px;
+    --mdc-typography-button-font-weight: 400;
     --mdc-typography-button-text-transform: none;
     &-light{
       --mdc-theme-primary: #DEDEDE;
+      &:hover{
+        .mdc-button__icon{
+          color: #949494;
+        }
+        .mdc-button__label{
+          color: #1371EC;
+        }
+      }
     }
     &-red{
       --mdc-theme-primary: #D43F3F;
@@ -67,6 +77,17 @@
   }
   .mdc-icon-button{
     color: #DEDEDE;
+    margin-left: 7px;
+    margin-right: 7px;
+    @include MDCIconButton.icon-size(18px, 18px, 4px);
+  }
+  .icon-buttons-wrap{
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .logo-image-circle{
+    width: 38px;
+    height: 38px;
   }
 }
 @media (max-width: 1200px) {
