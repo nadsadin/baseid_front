@@ -1,5 +1,6 @@
 @use "@material/form-field/mdc-form-field";
 @use "@material/textfield/mdc-text-field";
+@use "@material/checkbox/mixins" as MDCCheckbox;
 @use "@material/checkbox/mdc-checkbox";
 .w-100{
   width: 100%;
@@ -23,4 +24,7 @@
   color: #b00020;
   color: var(--mdc-theme-error, #b00020);
   opacity: 1;
+}
+.mdc-checkbox{
+  @include  MDCCheckbox.container-colors(rgba(0,0,0,.54), transparent, #1371ec, #1371ec, true);
 }
