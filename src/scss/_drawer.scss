@@ -85,6 +85,13 @@ $border: rgba(255,255,255,0);
       color: #888888;
       &.active{
         color: #1371EC;
+        ion-icon{
+          color: #1371EC;
+        }
+      }
+      ion-icon{
+        pointer-events: none;
+        color: #888888;
       }
     }
   }

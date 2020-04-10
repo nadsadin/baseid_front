@@ -12,6 +12,12 @@
     color: #5e5e5e;
     &.active{
       color: #1371EC;
+      ion-icon{
+        color: #1371EC;
+      }
+    }
+    ion-icon{
+      color: #888888;
     }
   }
 }
