@@ -7,9 +7,11 @@ import {MDCIconButtonToggle} from '@material/icon-button';
 import mdcAutoInit from '@material/auto-init';
 import {MDCTextField} from '@material/textfield';
 import './bootstrap';
+import 'popper.js'
 import './../img/logo.png';
 $(function() {
     console.log('Hello world');
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 mdcAutoInit.register('MDCTextField', MDCTextField);
@@ -50,8 +52,7 @@ const initPermanentDrawer = () => {
     return list;
 }
 if(drawerElement){
-    let drawer = window.matchMedia("(max-width: 900px)").matches ?
-        initModalDrawer() : initPermanentDrawer();
+    // let drawer = window.matchMedia("(max-width: 900px)").matches ? initModalDrawer() : initPermanentDrawer();
 }
 
 // Toggle between permanent drawer and modal drawer at breakpoint 900px
@@ -65,7 +66,7 @@ const resizeHandler = () => {
         drawer = initPermanentDrawer();
     }
 }
-window.addEventListener('resize', resizeHandler);
+// window.addEventListener('resize', resizeHandler);
 
 let vh = window.innerHeight * 0.01;
 let bar_width = document.querySelector('.top-app-bar__scroll-target').clientWidth;

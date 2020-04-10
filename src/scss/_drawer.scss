@@ -1,4 +1,5 @@
 $surface-padding: 20px;
+$alert-size: 15px;
 @use "@material/drawer/variables" with($surface-padding: $surface-padding, $list-item-spacing: 1px);
 @use "@material/drawer/mixins" as MDCDrawer;
 @use "@material/icon-button/mixins" as MDCIconButton;
@@ -6,19 +7,19 @@ $surface-padding: 20px;
 @use "@material/list/mdc-list";
 $border: rgba(255,255,255,0);
 .mdc-drawer{
-  box-shadow: 0px 0px 50px rgba(205, 205, 205, 0.25);
   @include MDCDrawer.border-color($border);
-  @include MDCDrawer.width(230px);
+  @include MDCDrawer.width(70px);
   @include MDCDrawer.fill-color-accessible(#ffffff);
   @include MDCDrawer.activated-overlay-color(#ffffff);
-  @include MDCDrawer.item-text-ink-color(#484848);
-  @include MDCDrawer.item-activated-text-ink-color(#000000);
+  @include MDCDrawer.item-text-ink-color(#888888);
+  @include MDCDrawer.item-activated-text-ink-color(#1371EC);
 
 }
 .mdc-drawer__header{
   display: flex;
   align-items: center;
   text-decoration: none;
+  padding: 0;
 }
 .drawer-frame-root {
   display: flex;
@@ -68,6 +69,25 @@ $border: rgba(255,255,255,0);
 .mdc-drawer{
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    overflow-y: unset;
+    box-sizing: border-box;
+  }
+  &__group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mdc-icon-button{
+      color: #888888;
+      &.active{
+        color: #1371EC;
+      }
+    }
+  }
   .mdc-list-section{
     margin-top: 40px;
     &__header{
@@ -204,5 +224,21 @@ $border: rgba(255,255,255,0);
         border-radius: 50%;
       }
     }
+  }
+}
+.mdc-icon-button__alert{
+  display: block;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: $alert-size;
+  height: $alert-size;
+  font-size: 8px;
+  line-height: $alert-size;
+  border-radius: $alert-size;
+  text-align: center;
+  &-red{
+    background-color: #F03663;
+    color: #ffffff;
   }
 }
