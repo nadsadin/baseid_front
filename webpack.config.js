@@ -28,7 +28,7 @@ module.exports = {
         publicPath: '../',
     },
     devtool: "source-map",
-    mode: "production",
+    mode: "development",
     optimization: {
         minimizer: [
             new TerserPlugin({
