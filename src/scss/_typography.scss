@@ -21,13 +21,14 @@ body{
     line-height: 28px;
     margin-top: 10px;
   }
-  a{
-    text-decoration: none;
-    &:visited, &:active{
-      color: $primary;
-    }
-    &:hover{
-      text-decoration: underline;
-    }
+}
+a{
+  text-decoration: none;
+  color: $primary;
+  &:visited, &:active{
+    color: $primary;
+  }
+  &:hover{
+    text-decoration: underline;
   }
 }

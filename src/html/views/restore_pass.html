@@ -1,0 +1,46 @@
+
+<% var data = {
+title: "BaseID - Восстановить пароль",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header_blank.html').default)(data) %>
+
+<div class="auth-wrap">
+  <div class="auth-inner">
+    <div class="mdc-card auth-card mdc-elevation--z8">
+      <a href="/" class="auth-card__logo">
+        Base<strong>ID</strong>
+      </a>
+      <div class="mdc-typography--headline4">Восстановить пароль</div>
+      <div class="mdc-form-field-wrapper">
+        <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+          <input type="text" class="mdc-text-field__input" aria-labelledby="phone-label" required>
+          <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" id="phone-label">Телефон / Email</span>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
+          </div>
+        </label>
+        <div class="mdc-text-field-helper-line ">
+          <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent "  aria-hidden="true">Мобильный телефон / email указанный при регистрации.</div>
+        </div>
+        <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+          <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Неверно указан номер телефона или email.</div>
+        </div>
+      </div>
+      <div class="auth-card__footer">
+        <button class="mdc-button mdc-button--unelevated"><span class="mdc-button-label">Восстановить пароль</span></button>
+        <div class="auth-card__footer-text"><a href="#">Войти</a> | <a href="#">Регистрация</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="auth-footer">
+    Все права защищены. При использовании материалов - ссылка обязательна.
+    <br>Единый аккаунт для бизнеса Base ID. Официальный сайт - Baseid.Org
+    <br>ООО «Центр интернет технологий». ИНН 9731056862, ОГРН 1197746691812
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
