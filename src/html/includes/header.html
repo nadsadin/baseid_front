@@ -20,14 +20,17 @@
     <div class="mdc-drawer__content">
       <div class="mdc-drawer__group" >
         <a href="#" class="mdc-drawer__header">
-          <img src="img/logo.png" alt="" class="logo-image-circle">
+          <svg class="logo-image-circle" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="10" fill="#1371EC"/>
+            <path d="M33.4966 67H29.2966V29.928H33.4966V67ZM55.9697 29.928C58.1724 29.928 60.3004 30.3573 62.3537 31.216C64.407 32.0373 66.2177 33.2507 67.7857 34.856C71.2577 38.4027 72.9937 42.9387 72.9937 48.464C72.9937 53.9893 71.2577 58.5253 67.7857 62.072C66.2177 63.6773 64.407 64.9093 62.3537 65.768C60.3004 66.5893 58.1724 67 55.9697 67H40.3457V29.928H55.9697ZM55.8017 63.024C59.6844 63.024 62.839 61.5867 65.2657 58.712C67.6177 55.9493 68.7937 52.5333 68.7937 48.464C68.7937 44.3947 67.6177 40.9787 65.2657 38.216C62.839 35.3413 59.6844 33.904 55.8017 33.904H44.5457V63.024H55.8017Z" fill="white"/>
+          </svg>
         </a>
         <a href="#" class="mdc-icon-button"  data-toggle="tooltip" data-placement="right" title="Оповещения">
           <ion-icon name="notifications-outline"></ion-icon>
           <span class="mdc-icon-button__alert mdc-icon-button__alert-red">10</span>
         </a>
         <a href="#" class="mdc-icon-button active"  data-toggle="tooltip" data-placement="right" title="Ваши документы"><ion-icon name="documents-outline"></ion-icon> </a>
-        <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="right" title="Приложения"><ion-icon name="apps-outline"></ion-icon></a>
+        <a href="#" class="mdc-icon-button"  ><ion-icon name="apps-outline"></ion-icon></a>
       </div>
       <div class="mdc-drawer__group">
         <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="right" title="Бухгалтерия"><ion-icon name="wallet-outline"></ion-icon></a>
@@ -46,42 +49,22 @@
     <a href="#" class="mdc-icon-button"><ion-icon name="person-outline"></ion-icon> </a>
   </div>
   <div class="drawer-frame-app-content">
-    <header id="top-app-bar" class="mdc-top-app-bar mdc-top-app-bar--transparent-light drawer-top-app-bar">
+    <header id="top-app-bar" class="mdc-top-app-bar mdc-top-app-bar--raised drawer-top-app-bar">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <a href="#" class="demo-menu mdc-top-app-bar__navigation-icon mdc-icon-button"><ion-icon name="menu-outline"></ion-icon></a>
-          <a href="#" class="mdc-button mdc-button-red hide-tablet">
-            <div class="mdc-button__ripple"></div>
-            <i class="mdi mdi-bell-outline mdc-button__icon" aria-hidden="true"></i>
-            <span class="mdc-button__label">Оповещения: 46</span>
+          <a href="#" class="mdc-top-app-bar__logo">
+            <svg class="logo-image-circle" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" rx="10" fill="#1371EC"/>
+              <path d="M33.4966 67H29.2966V29.928H33.4966V67ZM55.9697 29.928C58.1724 29.928 60.3004 30.3573 62.3537 31.216C64.407 32.0373 66.2177 33.2507 67.7857 34.856C71.2577 38.4027 72.9937 42.9387 72.9937 48.464C72.9937 53.9893 71.2577 58.5253 67.7857 62.072C66.2177 63.6773 64.407 64.9093 62.3537 65.768C60.3004 66.5893 58.1724 67 55.9697 67H40.3457V29.928H55.9697ZM55.8017 63.024C59.6844 63.024 62.839 61.5867 65.2657 58.712C67.6177 55.9493 68.7937 52.5333 68.7937 48.464C68.7937 44.3947 67.6177 40.9787 65.2657 38.216C62.839 35.3413 59.6844 33.904 55.8017 33.904H44.5457V63.024H55.8017Z" fill="white"/>
+            </svg>
           </a>
+          <a href="#" class="demo-menu mdc-top-app-bar__navigation-icon mdc-icon-button"><ion-icon name="menu-outline"></ion-icon></a>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-<!--          <a href="#" class="mdc-button mdc-button-light hide-desktop">-->
-<!--            <div class="mdc-button__ripple"></div>-->
-<!--            <i class="mdi mdi-file-document-edit-outline mdc-button__icon" aria-hidden="true"></i>-->
-<!--            <span class="mdc-button__label mdc-button__label-light">Договоры: 466</span>-->
-<!--          </a>-->
-          <a href="#" class="mdc-button mdc-button-light hide-desktop">
-            <div class="mdc-button__ripple"></div>
-            <i class="mdi mdi-text-box-multiple-outline mdc-button__icon" aria-hidden="true"></i>
-            <span class="mdc-button__label mdc-button__label-light">Документы: <span class="mdc-button__label-black">83</span></span>
-          </a>
-<!--          <a href="#" class="mdc-button mdc-button-light hide-desktop">-->
-<!--            <div class="mdc-button__ripple"></div>-->
-<!--            <i class="mdi mdi-account-multiple mdc-button__icon" aria-hidden="true"></i>-->
-<!--            <span class="mdc-button__label mdc-button__label-light">Сотрудники: <span class="mdc-button__label-black">5</span></span>-->
-<!--          </a>-->
-          <a href="#" class="mdc-button mdc-button-light">
-            <div class="mdc-button__ripple"></div>
-            <i class="mdi mdi-currency-rub mdc-button__icon" aria-hidden="true"></i>
-            <span class="mdc-button__label mdc-button__label-light"><span class="hide-mobile">Баланс: </span><span class="mdc-button__label-red">- 12 500 ₽</span></span>
-          </a>
           <div class="icon-buttons-wrap " >
-            <a href="#" class="material-icons mdc-icon-button">settings</a>
-            <a href="#" class="material-icons mdc-icon-button">apps</a>
+            <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="bottom" title="Поддержка"><ion-icon name="headset-outline"></ion-icon> </a>
           </div>
-          <img src="img/logo.png" alt="" class="logo-image-circle">
+          <img src="img/logo.png" alt="" class="avatar-image-circle">
         </section>
       </div>
     </header>

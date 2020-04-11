@@ -58,6 +58,7 @@ $border: rgba(255,255,255,0);
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: #F8F8F8;
 }
 .mdc-drawer-list-item-fix{
   width: 0;
