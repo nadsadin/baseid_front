@@ -1,4 +1,5 @@
 $mdc-typography-color: #212121;
+$primary: #1371EC;
 $mdc-typography-styles-headline4: (
         font-size: 28px,
         font-weight: bold,
@@ -12,4 +13,21 @@ body{
   margin: 0;
   color: #212121;
   --mdc-typography-button-text-transform: none;
+}
+.text-content{
+  padding: 60px 0;
+  font-size: 14px;
+  p{
+    line-height: 28px;
+    margin-top: 10px;
+  }
+  a{
+    text-decoration: none;
+    &:visited, &:active{
+      color: $primary;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
