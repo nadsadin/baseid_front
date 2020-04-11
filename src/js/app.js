@@ -38,29 +38,21 @@ if(topAppBarElement) {
             drawer.open = !drawer.open;
         });
 
-        listEl.addEventListener('click', (event) => {
-            drawer.open = false;
-        });
-
         return drawer;
     }
 
     const initPermanentDrawer = () => {
         drawerElement.classList.remove("mdc-drawer--modal");
-        // const list = new MDCList(listEl);
-        // list.wrapFocus = true;
-        // return list;
         return drawerElement;
     }
+    let drawer = window.matchMedia("(max-width: 839px)").matches ? initModalDrawer() : initPermanentDrawer();
     if (drawerElement) {
-        let drawer = window.matchMedia("(max-width: 839px)").matches ? initModalDrawer() : initPermanentDrawer();
     }
 
 // Toggle between permanent drawer and modal drawer at breakpoint 839px
 
     const resizeHandler = () => {
-        if (window.matchMedia("(max-width: 839px)").matches && !drawer instanceof MDCDrawer) {
-            drawer.destroy();
+        if (window.matchMedia("(max-width: 839px)").matches && !(drawer instanceof MDCDrawer)) {
             drawer = initModalDrawer();
         } else if (window.matchMedia("(min-width: 840px)").matches && drawer instanceof MDCDrawer) {
             drawer.destroy();
