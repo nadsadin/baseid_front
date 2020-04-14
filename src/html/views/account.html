@@ -7,6 +7,10 @@ author: "Nadsadin"
 <div class="mdc-top-app-bar--fixed-adjust"></div>
 <div class="mdc-layout-grid mdc-layout-grid--narrow">
   <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12 mb-4">
+      <div class="mdc-typography--headline4 mb-4">Мастер</div>
+      <div class="mdc-typography--body1">Для работы с приложением...</div>
+    </div>
     <div class="mdc-layout-grid__cell--span-12">
       <div class="mdc-card account-card">
           <div class="mdc-typography--headline4 mb-4">Персональные данные </div>
@@ -220,7 +224,7 @@ author: "Nadsadin"
             <label for="checkbox-2" class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent">Я принимаю условия <a
                 href="#">Соглашения об электронном взаимодействии</a></label>
           </div>
-          <div class="mdc-form-field-wrapper">
+          <div class="mdc-form-field-wrapper mt-4">
             <button class="mdc-button mdc-button--unelevated w-200" type="submit">Далее</button>
           </div>
         </form>
@@ -411,7 +415,7 @@ author: "Nadsadin"
               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Это поле обязательно к заполнению.</div>
             </div>
           </div>
-          <div class="mdc-form-field-wrapper">
+          <div class="mdc-form-field-wrapper mt-4">
             <button class="mdc-button mdc-button--unelevated w-200" type="submit">Сохранить</button>
           </div>
         </form>
@@ -420,7 +424,10 @@ author: "Nadsadin"
         <div class="mdc-typography--headline4 mb-4">Тип аккаунта</div>
         <div class="account-card__help-text">
           Для начала работы, выберите тип аккаунта.
-          <br>После того, как вы нажмете кнопку "Подтвердить", вы не сможете изменить тип аккаунта!
+          <div class="my-mdc-alert">
+            <div class="my-mdc-alert-icon"><ion-icon name="alert-circle-outline"></ion-icon></div>
+            <div class="my-mdc-alert-text">После того, как вы нажмете кнопку "Подтвердить", вы не сможете изменить тип аккаунта!</div>
+          </div>
         </div>
         <form action="">
           <div class="mdc-form-field-wrapper">
@@ -467,13 +474,13 @@ author: "Nadsadin"
               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Это поле обязательно к заполнению.</div>
             </div>
           </div>
-          <div class="mdc-form-field-wrapper">
+          <div class="mdc-form-field-wrapper mt-4">
             <button class="mdc-button mdc-button--unelevated w-200" type="submit">Подтвердить</button>
           </div>
         </form>
       </div>
       <div class="mdc-card account-card">
-        <div class="mdc-typography--headline4 mb-4 text-success">Тип аккаунта</div>
+        <div class="mdc-typography--headline4 mb-4 text-success">Тип аккаунта выбран</div>
         <form action="">
           <div class="mdc-form-field-wrapper">
             <div class="mdc-select mdc-select--outlined mdc-select--required mdc-select--disabled" data-mdc-auto-init="MDCSelect">
@@ -543,7 +550,7 @@ author: "Nadsadin"
               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Номер введен неправильно.</div>
             </div>
           </div>
-          <div class="mdc-form-field-wrapper">
+          <div class="mdc-form-field-wrapper mt-4">
             <button class="mdc-button mdc-button--unelevated w-200" type="submit">Сохранить</button>
           </div>
         </form>

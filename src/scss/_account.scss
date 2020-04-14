@@ -7,6 +7,19 @@
     box-shadow: 0 3px 6px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
     &__help-text{
       font-size: 12px;
+      margin-bottom: 24px;
     }
+  }
+}
+.my-mdc-alert{
+  display: flex;
+  align-items: baseline;
+  margin-top: 8px;
+  &-text{
+    color: #757575;
+  }
+  &-icon{
+    color: #757575;
+    margin-right: 5px;
   }
 }
