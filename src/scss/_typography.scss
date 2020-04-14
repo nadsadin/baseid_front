@@ -6,6 +6,9 @@ $mdc-typography-styles-headline4: (
         line-height: 25px,
         color: #212121
 );
+$mdc-typography-styles-body2: (
+  font-weight: 300
+);
 $styles-button: (text-transform: none);
 $mdc-typography-button-text-transform: none;
 @import "@material/typography/mdc-typography";

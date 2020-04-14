@@ -7,9 +7,11 @@ import {MDCIconButtonToggle} from '@material/icon-button';
 import mdcAutoInit from '@material/auto-init';
 import {MDCTextField} from '@material/textfield';
 import {MDCSelect} from '@material/select';
+import {MDCSwitch} from '@material/switch';
 import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
+import './../img/service_email.png';
 $(function() {
     console.log('Hello world');
     $('[data-toggle="tooltip"]').tooltip();
@@ -28,10 +30,14 @@ $(function() {
         let filename = e.target.files[0].name;
         $(this).next('.my-mdc-file-field__filename').text(filename);
     })
+    document.querySelectorAll( '.mdc-switch' ).forEach(function (sw) {
+        const switchControl = new MDCSwitch(sw);
+    });
 });
 
 mdcAutoInit.register('MDCSelect', MDCSelect);
 mdcAutoInit.register('MDCTextField', MDCTextField);
+// mdcAutoInit.register('MDCTextField', MDCSwitch);
 mdc.autoInit();
 // Select DOM elements
 

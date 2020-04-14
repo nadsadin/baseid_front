@@ -1,2 +1,2 @@
 $primary: #1371EC;
-@use "@material/theme" with($primary: $primary);
+@use "@material/theme" with($primary: $primary, $secondary: $primary);
