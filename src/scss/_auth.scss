@@ -1,5 +1,5 @@
 @use "@material/card/mdc-card";
-@use "@material/elevation/mdc-elevation";
+@use "@material/elevation";
 
 .auth{
   &-wrap{
@@ -47,6 +47,10 @@
         letter-spacing: 0.0333333333em;
         letter-spacing: var(--mdc-typography-caption-letter-spacing, 0.0333333333em);
       }
+    }
+    .mdc-form-field-wrapper{
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
     .mdc-typography--headline4{
       margin-bottom: 16px;

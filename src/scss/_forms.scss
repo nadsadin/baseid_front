@@ -2,12 +2,16 @@
 @use "@material/textfield/mdc-text-field";
 @use "@material/checkbox/mixins" as MDCCheckbox;
 @use "@material/checkbox/mdc-checkbox";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/mdc-select";
 .w-100{
   width: 100%;
 }
 .mdc-form-field-wrapper{
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   --mdc-theme-primary: #1371EC;
 }
 .mdc-text-field + .mdc-text-field-helper-line{
@@ -17,14 +21,36 @@
 .mdc-text-field-helper-line--error{
   height: 0;
 }
-.mdc-text-field--invalid~.mdc-text-field-helper-line--error{
+.mdc-text-field--invalid~.mdc-text-field-helper-line--error, .mdc-select--invalid~.mdc-text-field-helper-line--error{
   height: auto;
 }
-.mdc-text-field--invalid~.mdc-text-field-helper-line>.mdc-text-field-helper-text--error{
+.mdc-text-field--invalid~.mdc-text-field-helper-line>.mdc-text-field-helper-text--error, .mdc-select--invalid~.mdc-text-field-helper-line>.mdc-text-field-helper-text--error{
   color: #b00020;
   color: var(--mdc-theme-error, #b00020);
   opacity: 1;
 }
 .mdc-checkbox{
   @include  MDCCheckbox.container-colors(rgba(0,0,0,.54), transparent, #1371ec, #1371ec, true);
+}
+.my-mdc-file-field{
+  display: flex;
+  align-items: center;
+  input{
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__filename{
+    font-size: .75rem;
+    font-weight: 400;
+    color: rgba(0,0,0,.6);
+    margin-left: 16px;
+  }
+  &--disabled{
+    .mdc-button{
+      background-color: #949494;
+    }
+  }
 }

@@ -6,14 +6,31 @@ import {MDCList} from "@material/list";
 import {MDCIconButtonToggle} from '@material/icon-button';
 import mdcAutoInit from '@material/auto-init';
 import {MDCTextField} from '@material/textfield';
+import {MDCSelect} from '@material/select';
 import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
 $(function() {
     console.log('Hello world');
     $('[data-toggle="tooltip"]').tooltip();
+    document.querySelectorAll( '[data-mdc-auto-init="MDCSelect"]' ).forEach( function( sel ) {
+        sel.My_MDCSelect__Value = sel.querySelector('input.my_mdc-select__value');
+        if ( null !== sel.My_MDCSelect__Value ) {
+            sel.addEventListener( 'MDCSelect:change', function( a ) {
+                if ( sel.MDCSelect ) {
+                    sel.My_MDCSelect__Value.value = sel.MDCSelect.value;
+                }
+            } );
+        }
+    } );
+//    file field file name
+    $('.my-mdc-file-field input:not(:disabled)').on('change',  function (e) {
+        let filename = e.target.files[0].name;
+        $(this).next('.my-mdc-file-field__filename').text(filename);
+    })
 });
 
+mdcAutoInit.register('MDCSelect', MDCSelect);
 mdcAutoInit.register('MDCTextField', MDCTextField);
 mdc.autoInit();
 // Select DOM elements

@@ -15,12 +15,12 @@
   @include MDCTopAppBar.mdc-top-app-bar-fill-color-accessible(transparent);
   @include MDCTopAppBar.mdc-top-app-bar-icon-ink-color(#5e5e5e);
 }
-.mdc-top-app-bar__logo, .mdc-top-app-bar__navigation-icon{
+.mdc-top-app-bar__logo, .mdc-top-app-bar__navigation-icon, .top-app-bar__back-link{
   display: none;
 }
 
 @media (max-width: 839px) {
-  .mdc-top-app-bar__navigation-icon {
+  .mdc-top-app-bar__navigation-icon, .top-app-bar__back-link {
     display: block;
   }
   .mdc-top-app-bar__logo{
