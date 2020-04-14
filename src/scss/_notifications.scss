@@ -1,0 +1,71 @@
+
+@use "@material/icon-button/mixins" as MDCIconButton;
+.notification{
+  &-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &-card{
+    padding: 16px;
+    background-color: #fff;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .media{
+      .logo-placeholder{
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 38px;
+        font-size: 15px;
+        color: #ffffff;
+        background-color: rgb(19, 79, 92);
+        text-align: center;
+      }
+      img{
+        width: 38px;
+        height: auto;
+      }
+    }
+    &-company{
+      font-size: 12px;
+      font-weight: 500;
+    }
+    &-name{
+      color: #5e5e5e;
+      font-size: 10px;
+    }
+    &-body{
+      display: flex;
+      align-items: center;
+    }
+    &-text{
+      color: #5e5e5e;
+      font-size: 12px;
+      margin: 0 16px;
+    }
+    &-close-icon{
+      color: #5e5e5e;
+      @include MDCIconButton.icon-size(20px, 20px, 4px);
+      &:visited, &:active{
+        color: #5e5e5e;
+      }
+    }
+  }
+}
+@media (max-width: 599px) {
+  .notification{
+    &-card{
+      align-items: start;
+      &-body{
+        display: block;
+      }
+      &-text{
+        margin: 8px 0 0;
+      }
+    }
+  }
+}

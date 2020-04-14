@@ -59,6 +59,8 @@ $border: rgba(255,255,255,0);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #F8F8F8;
+  padding-bottom: 50px;
+  box-sizing: border-box;
 }
 .mdc-drawer-list-item-fix{
   width: 0;

@@ -1,7 +1,9 @@
 @use "@material/button/mdc-button";
 
 .mdc-button{
-
+  &:hover{
+    text-decoration: none;
+  }
 }
 .w-200{
   min-width: 200px;
