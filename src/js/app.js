@@ -12,6 +12,7 @@ import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
 import './../img/service_email.png';
+import './../img/service_104.png';
 $(function() {
     console.log('Hello world');
     $('[data-toggle="tooltip"]').tooltip();

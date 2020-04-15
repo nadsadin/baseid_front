@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     label{
       margin: 0 16px;
     }
@@ -51,6 +52,7 @@
       img{
         width: 70%;
         height: 70%;
+        border-radius: 23%;
       }
     }
   }
@@ -80,4 +82,7 @@
       }
     }
   }
+}
+.page-header{
+  background-color: #e7e7e7;
 }

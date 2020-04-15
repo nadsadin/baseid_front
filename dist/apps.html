@@ -89,15 +89,21 @@
 
 
         <div class="mdc-top-app-bar--fixed-adjust"></div>
-        <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid page-header">
           <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6 pb-4">
               <div class="mdc-typography--headline4 mb-4">Приложения</div>
               <div class="mdc-typography--body2">
                 В разделе "Приложения" можно выбрать внешние и внутренние сервисы, приложения и сайты деловой тематики (на которых настроена авторизация при помощи BaseID). Приложения могут быть платными, бесплатными и с тестовым периодом бесплатной эксплуатации.
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-12">
               <div class="app-switch">
-                <label for="app-switch" data-toggle="tooltip" data-placement="top" title="Приложения работающие внутри BaseID">Внутренние приложения</label>
+                <label for="app-switch" data-toggle="tooltip" data-placement="top" title="Приложения работающие внутри BaseID">Внутренние приложения<sup>βeta</sup></label>
                 <div class="mdc-switch">
                   <div class="mdc-switch__track"></div>
                   <div class="mdc-switch__thumb-underlay">
@@ -105,7 +111,7 @@
                     <input type="checkbox" id="app-switch" class="mdc-switch__native-control" role="switch" aria-checked="false">
                   </div>
                 </div>
-                <label for="app-switch" data-toggle="tooltip" data-placement="top" title="Внешние сайты, сервисы и приложения">Внешние приложения</label>
+                <label for="app-switch" data-toggle="tooltip" data-placement="top" title="Внешние сайты, сервисы и приложения">Внешние приложения<sup>Скоро</sup></label>
               </div>
             </div>
             <div class="mdc-layout-grid__cell--span-12">
@@ -125,7 +131,20 @@
               <div class="app-card hoverable">
                 <div class="app-card-body">
                   <div class="app-card-logo">
-                    <img src="img/service_email.png" alt="">
+                    <img src="img/service_104.png" alt="">
+                  </div>
+                  <div class="app-card-text">
+                    <div class="app-card-title">Интеграция с электронной почтой</div>
+                    <div class="app-card-description">Подключите почтовый ящик. Письма с него будут сразу подгружаться в систему.</div>
+                  </div>
+                </div>
+                <div class="app-card-price">690 ₽ / месяц</div>
+                <a href="#" class="mdc-button mdc-button--unelevated">Подключить</a>
+              </div>
+              <div class="app-card hoverable">
+                <div class="app-card-body">
+                  <div class="app-card-logo">
+                    <img src="img/service_105.png" alt="">
                   </div>
                   <div class="app-card-text">
                     <div class="app-card-title">Интеграция с электронной почтой</div>
