@@ -17,7 +17,7 @@
     }
   }
   &-card{
-    padding: 16px;
+    padding: 24px 16px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -40,6 +40,7 @@
       .my-mdc-alert{
         font-size: 11px;
         font-weight: 300;
+        margin-top: 16px;
       }
     }
     &-title{
@@ -52,7 +53,6 @@
       font-size: 12px;
       line-height: 18px;
       color: #757575;
-      margin-bottom: 8px;
     }
     &-logo{
       display: flex;
