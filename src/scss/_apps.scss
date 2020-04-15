@@ -9,6 +9,11 @@
     margin-bottom: 32px;
     label{
       margin: 0 16px;
+      sup{
+        color: #B8b8b8;
+        font-weight: 300;
+        margin-left: 5px;
+      }
     }
   }
   &-card{
@@ -81,8 +86,15 @@
         align-self: flex-start;
       }
     }
+    &-switch{
+      label{
+        sup{
+          display: none;
+        }
+      }
+    }
   }
 }
 .page-header{
-  background-color: #e7e7e7;
+  background-color: #ecf3f7;
 }
