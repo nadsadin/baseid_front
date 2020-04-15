@@ -8,6 +8,8 @@ import mdcAutoInit from '@material/auto-init';
 import {MDCTextField} from '@material/textfield';
 import {MDCSelect} from '@material/select';
 import {MDCSwitch} from '@material/switch';
+import {MDCChipSet} from '@material/chips';
+import {MDCDataTable} from '@material/data-table';
 import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
@@ -34,6 +36,16 @@ $(function() {
     })
     document.querySelectorAll( '.mdc-switch' ).forEach(function (sw) {
         const switchControl = new MDCSwitch(sw);
+    });
+    document.querySelectorAll( '.mdc-chip-set' ).forEach(function (chip_set) {
+        const chipSet = new MDCChipSet(chip_set);
+        chipSet.listen('MDCChip:selection', function (event) {
+            console.log(event.detail.chipId);
+            console.log(event.detail);
+        })
+    });
+    document.querySelectorAll( '.mdc-data-table' ).forEach(function (table) {
+        const dataTable = new MDCDataTable(table);
     });
 });
 

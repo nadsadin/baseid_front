@@ -1,0 +1,72 @@
+@use "mdc_theme";
+@use "@material/chips/mdc-chips";
+@use "@material/data-table/mdc-data-table";
+.docs{
+  &-tariff{
+    &-info{
+      color: rgb(102, 102, 102);
+      font-weight: 300;
+      font-size: 14px;
+    }
+    &-term{
+      color: rgb(183, 183, 183);
+      font-size: 11px;
+    }
+  }
+  &-card{
+    background-color: #ecf3f7;
+    border-radius: 4px;
+    padding: 32px 16px;
+    display: block;
+    &:hover{
+      text-decoration: none;
+    }
+    &-title{
+      color: #212121;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    &-description{
+      color: #212121;
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+  &-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .mdc-typography--body2{
+      margin-right: 16px;
+    }
+    .mdc-button{
+      flex-shrink: 0;
+    }
+  }
+  &-chips{
+    justify-content: flex-end;
+    .mdc-chip--selected{
+      background-color: mdc_theme.$primary;
+      color: #fff;
+      .mdc-chip__checkmark-path{
+        stroke: #fff;
+      }
+    }
+  }
+}
+@media (max-width: 599px) {
+  .docs{
+    &-info{
+      flex-wrap: wrap;
+      .mdc-typography--body2{
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+.my-data-table-wrap{
+  width: 100%;
+  overflow: auto;
+}
