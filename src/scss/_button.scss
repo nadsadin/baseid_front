@@ -1,4 +1,6 @@
-@use "@material/button/mdc-button";
+@use "@material/button";
+
+@include button.core-styles;
 
 .mdc-button{
   &:hover{
