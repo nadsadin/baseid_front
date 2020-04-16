@@ -1,6 +1,8 @@
 @use "mdc_theme";
 @use "@material/chips";
 @use "@material/data-table/mdc-data-table";
+@use "@material/icon-button";
+@use "@material/typography";
 @include chips.core-styles;
 @include chips.set-core-styles;
 .docs{
@@ -96,9 +98,11 @@
       &__header-cell{
         font-size: .7rem;
       }
-    }
-    ion-icon{
-      vertical-align: middle;
+      &__cell{
+        ion-icon{
+          vertical-align: middle;
+        }
+      }
     }
   }
   &__link{
@@ -113,6 +117,20 @@
   &__info-text{
     font-size: 80%;
     color: #757575;
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 24px;
+    &-text{
+      @include typography.typography('body2');
+      margin-right: 16px;
+    }
+    .mdc-icon-button{
+      @include icon-button.icon-size(18px, 18px, 4px);
+      @include icon-button.ink-color(#888888);
+    }
   }
 }
 .my-mdc-chip{
