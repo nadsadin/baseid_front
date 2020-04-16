@@ -39,9 +39,13 @@ $(function() {
     });
     document.querySelectorAll( '.mdc-chip-set' ).forEach(function (chip_set) {
         const chipSet = new MDCChipSet(chip_set);
-        chipSet.listen('MDCChip:selection', function (event) {
+        chip_set.chipSet = chipSet;
+        chipSet.listen('MDCChip:selection', function (event, chipSet) {
             console.log(event.detail.chipId);
-            console.log(event.detail);
+            console.log(event.detail.selected);
+            if(this.chipSet instanceof MDCChipSet){
+                console.log(this.chipSet.selectedChipIds);
+            }
         })
     });
     document.querySelectorAll( '.mdc-data-table' ).forEach(function (table) {

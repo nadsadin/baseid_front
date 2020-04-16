@@ -1,6 +1,8 @@
 @use "mdc_theme";
-@use "@material/chips/mdc-chips";
+@use "@material/chips";
 @use "@material/data-table/mdc-data-table";
+@include chips.core-styles;
+@include chips.set-core-styles;
 .docs{
   &-tariff{
     &-info{
@@ -14,10 +16,15 @@
     }
   }
   &-card{
-    background-color: #ecf3f7;
+    background-color: #fff;
     border-radius: 4px;
     padding: 32px 16px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-height: 200px;
     &:hover{
       text-decoration: none;
     }
@@ -26,6 +33,10 @@
       font-weight: 500;
       font-size: 14px;
       margin-bottom: 16px;
+      sup{
+        color: #949494;
+        font-weight: 300;
+      }
     }
     &-description{
       color: #212121;
@@ -46,11 +57,18 @@
   }
   &-chips{
     justify-content: flex-end;
-    .mdc-chip--selected{
-      background-color: mdc_theme.$primary;
-      color: #fff;
-      .mdc-chip__checkmark-path{
-        stroke: #fff;
+    .mdc-chip{
+      font-size: .7rem;
+      background-color: #e8e8e8;
+      &--selected{
+        background-color: mdc_theme.$primary;
+        color: #fff;
+        .mdc-chip__checkmark-svg{
+          width: 16px;
+        }
+        .mdc-chip__checkmark-path{
+          stroke: #fff;
+        }
       }
     }
   }
@@ -66,7 +84,57 @@
     }
   }
 }
-.my-data-table-wrap{
-  width: 100%;
-  overflow: auto;
+.my-data-table{
+  &-wrap{
+    width: 100%;
+    overflow: auto;
+    .mdc-data-table{
+      width: 100%;
+      &__header-row{
+        background-color: #e0e0e0;
+      }
+      &__header-cell{
+        font-size: .7rem;
+      }
+    }
+    ion-icon{
+      vertical-align: middle;
+    }
+  }
+  &__link{
+    color: #212121;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover, &:active, &:visited{
+      color: #212121;
+      text-decoration: none;
+    }
+  }
+  &__info-text{
+    font-size: 80%;
+    color: #757575;
+  }
+}
+.my-mdc-chip{
+  &--small{
+    font-size: .7rem;
+    //@include chips.height(24px);
+    @include chips.density(-2);
+  }
+  &--green{
+    @include chips.fill-color(#00c853);
+    @include chips.ink-color(#212121);
+  }
+  &--light-green{
+    @include chips.fill-color(#69f0ae);
+    @include chips.ink-color(#212121);
+  }
+  &--orange{
+    @include chips.fill-color(#ffb300);
+    @include chips.ink-color(#212121);
+  }
+  &--light-gray{
+    @include chips.fill-color(#cfd8dc);
+    @include chips.ink-color(#212121);
+  }
 }
