@@ -105,12 +105,12 @@ if(topAppBarElement) {
 let vh = window.innerHeight * 0.01;
 let bar_width = document.querySelector('.top-app-bar__scroll-target').clientWidth;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-document.documentElement.style.setProperty('--mdc-top-app-bar-width', `${bar_width}px`);
+// document.documentElement.style.setProperty('--mdc-top-app-bar-width', `${bar_width}px`);
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     let bar_width = document.querySelector('.top-app-bar__scroll-target').clientWidth;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    document.documentElement.style.setProperty('--mdc-top-app-bar-width', `${bar_width}px`);
+    // document.documentElement.style.setProperty('--mdc-top-app-bar-width', `${bar_width}px`);
 });
 
 const icon_buttons = document.querySelectorAll(".mdc-icon-button");
