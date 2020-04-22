@@ -28,6 +28,9 @@
       text-align: center;
       text-decoration: none;
       margin-bottom: 32px;
+      &:hover{
+        text-decoration: none;
+      }
     }
     &__footer{
       margin-top: 16px;

@@ -1,3 +1,4 @@
+@use "mdc_theme";
 @use "@material/button";
 
 @include button.core-styles;
@@ -5,6 +6,10 @@
 .mdc-button{
   &:hover{
     text-decoration: none;
+  }
+  &--outlined:not(:disabled){
+    border-color: mdc_theme.$primary;
+    border-color: var(--mdc-theme-primary, mdc_theme.$primary);
   }
 }
 .w-200{

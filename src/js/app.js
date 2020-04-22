@@ -10,6 +10,9 @@ import {MDCSelect} from '@material/select';
 import {MDCSwitch} from '@material/switch';
 import {MDCChipSet} from '@material/chips';
 import {MDCDataTable} from '@material/data-table';
+import {MDCRipple} from '@material/ripple';
+import {MDCDialog} from '@material/dialog';
+import Quill from 'quill';
 import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
@@ -50,6 +53,29 @@ $(function() {
     });
     document.querySelectorAll( '.mdc-data-table' ).forEach(function (table) {
         const dataTable = new MDCDataTable(table);
+    });
+    document.querySelectorAll( '.mdc-fab' ).forEach(function (fab) {
+        const fabRipple = new MDCRipple(fab);
+    });
+
+    var editor = new Quill('#quill-editor', {
+        modules: {
+            toolbar: '#quill-toolbar'
+        },
+        placeholder: 'Введите текст документа',
+        theme: 'snow'
+    });
+    $('#docs-chat-button').on('click', function () {
+       $('#docs-chat').addClass('active');
+    });
+    $('#docs-chat-close').on('click', function () {
+       $('#docs-chat').removeClass('active');
+    });
+    $('[data-toggle="dialog"]').on('click', function (e) {
+        if(!this.MDCDialog){
+            this.MDCDialog = new MDCDialog(document.querySelector($(this).data('target')))
+        }
+        this.MDCDialog.open();
     });
 });
 

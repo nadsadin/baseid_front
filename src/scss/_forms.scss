@@ -6,6 +6,9 @@
 @use "@material/menu-surface/mdc-menu-surface";
 @use "@material/menu/mdc-menu";
 @use "@material/select/mdc-select";
+@use "@material/typography";
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.snow.css";
 .w-100{
   width: 100%;
 }
@@ -13,6 +16,19 @@
   margin-top: 16px;
   margin-bottom: 16px;
   --mdc-theme-primary: #1371EC;
+}
+.mdc-text-field-helper-text{
+  ion-icon{
+    vertical-align: text-top;
+  }
+}
+.label-strong{
+  font-weight: 500;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  ion-icon{
+    vertical-align: text-top;
+  }
 }
 .mdc-text-field + .mdc-text-field-helper-line{
   padding-left: 0px;
@@ -53,4 +69,7 @@
       background-color: #949494;
     }
   }
+}
+.ql-editor{
+  @include typography.typography('body1');
 }

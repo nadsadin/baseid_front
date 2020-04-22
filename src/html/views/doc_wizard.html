@@ -1,0 +1,308 @@
+
+<% var data = {
+title: "BaseID - Создание документа",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+      <div class="docs-form-card">
+        <div class="mdc-typography--headline4 mb-4">Создание документа</div>
+        <div class="mdc-typography--body2">Описание мастера</div>
+        <form action="">
+          <div class="label-strong">Номер документа * <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Номер документа необходим для документооборота. Вы можете указать любой номер, кроме ранее выбранных."></ion-icon></div>
+          <div class="mdc-form-field-wrapper">
+            <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+              <input type="text" class="mdc-text-field__input" aria-labelledby="doc-number-label" required>
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="doc-number-label">Номер документа
+</span>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </label>
+            <div class="mdc-text-field-helper-line ">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent "  aria-hidden="true"><ion-icon name="information-circle-outline"></ion-icon> Это обязательное поле. Можно вводить произвольное значение, подходящее для вашего документооборота.</div>
+            </div>
+            <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Внимание! Вы не заполнили обязательное поле!</div>
+            </div>
+          </div>
+          <div class="mdc-form-field-wrapper">
+            <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+              <input type="text" class="mdc-text-field__input" aria-labelledby="doc-date-label" disabled value="20.04.2020">
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="doc-date-label">Дата документа
+</span>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </label>
+          </div>
+          <div class="mdc-form-field-wrapper">
+            <div class="mdc-select mdc-select--outlined mdc-select--required" data-mdc-auto-init="MDCSelect">
+              <input type="hidden" name="country" value="" class="my_mdc-select__value" />
+              <div class="mdc-select__anchor w-100">
+                <i class="mdc-select__dropdown-icon"></i>
+                <div class="mdc-select__selected-text" aria-labelledby="outlined-select-label" aria-required="true"></div>
+                <div class="mdc-notched-outline">
+                  <div class="mdc-notched-outline__leading"></div>
+                  <div class="mdc-notched-outline__notch">
+                    <span class="mdc-floating-label">Тип документа</span>
+                  </div>
+                  <div class="mdc-notched-outline__trailing"></div>
+                </div>
+              </div>
+
+              <!-- Other elements from the select remain. -->
+              <div class="mdc-select__menu mdc-menu mdc-menu-surface w-100" role="listbox">
+                <ul class="mdc-list">
+                  <li class="mdc-list-item" data-value="1" role="option" >
+                    Договор
+                  </li>
+                  <li class="mdc-list-item" data-value="2" role="option">
+                    Соглашение
+                  </li>
+                  <li class="mdc-list-item" data-value="3" role="option">
+                    Произвольный тип
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mdc-text-field-helper-line ">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent "  aria-hidden="true">Выберите тип документа</div>
+            </div>
+            <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Внимание! Вы не заполнили обязательное поле!</div>
+            </div>
+          </div>
+          <div class="mdc-form-field-wrapper">
+            <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+              <input type="text" class="mdc-text-field__input" aria-labelledby="doc-name-label" required>
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="doc-name-label">Тема документа
+</span>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </label>
+            <div class="mdc-text-field-helper-line ">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent "  aria-hidden="true">Введите тему документа</div>
+            </div>
+            <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+              <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Внимание! Вы не заполнили обязательное поле!</div>
+            </div>
+          </div>
+          <div class="mdc-form-field-wrapper">
+            <div id="quill-toolbar">
+              <span class="ql-formats">
+                <select class="ql-font"></select>
+                <select class="ql-size"></select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-strike"></button>
+              </span>
+              <span class="ql-formats">
+                <select class="ql-color"></select>
+                <select class="ql-background"></select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-script" value="sub"></button>
+                <button class="ql-script" value="super"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-header" value="1"></button>
+                <button class="ql-header" value="2"></button>
+                <button class="ql-blockquote"></button>
+                <button class="ql-code-block"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+                <button class="ql-indent" value="-1"></button>
+                <button class="ql-indent" value="+1"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-direction" value="rtl"></button>
+                <select class="ql-align"></select>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-link"></button>
+                <button class="ql-image"></button>
+              </span>
+              <span class="ql-formats">
+                <button class="ql-clean"></button>
+              </span>
+            </div>
+            <div id="quill-editor"></div>
+          </div>
+          <div class="mdc-form-field-wrapper mt-5">
+            <div class="label-strong">Стороны подписывающие документ <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Добавьте стороны, подписывающие документ"></ion-icon></div>
+          </div>
+          <div class="docs-form-parties-wrap">
+            <div class="docs-form-parties">
+              <div class="docs-form-parties-label">С вашей стороны: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Добавьте стороны, подписывающие документ"></ion-icon></div>
+              <div class="media align-items-center mb-4">
+                <div class="docs-form-party-logo" style="background-color: rgb(19, 79, 92)">A</div>
+                <div class="media-body ml-3">
+                  <div class="docs-form-party-company">ООО АлгоритмПлюс</div>
+                  <div class="docs-form-party-name">Александр Петров</div>
+                </div>
+              </div>
+              <a href="#" class="mdc-button mdc-button--outlined" data-toggle="dialog" data-target="#demo-dialog">
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">Добавить участника</span>
+              </a>
+            </div>
+            <div class="docs-form-parties-divider"></div>
+            <div class="docs-form-parties">
+              <div class="docs-form-parties-label">С вашей стороны: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Добавьте стороны, подписывающие документ"></ion-icon></div>
+              <a href="#" class="mdc-button mdc-button--outlined" >
+                <div class="mdc-button__ripple"></div>
+                <span class="mdc-button__label">Добавить участника</span>
+              </a>
+            </div>
+          </div>
+          <div class="docs-form-parties-wrap mt-4">
+            <div class="docs-form-parties">
+              <div class="docs-form-parties-label">Внешний аудит: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Добавьте стороны, подписывающие документ"></ion-icon></div>
+              <div class="mt-4">
+                <a href="#" class="mdc-button mdc-button--outlined" data-toggle="dialog" data-target="#demo-dialog">
+                  <div class="mdc-button__ripple"></div>
+                  <span class="mdc-button__label">Добавить участника</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5">
+            <button type="submit" class="mdc-button mdc-button--unelevated">Создать документ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mdc-dialog" id="demo-dialog">
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface"
+         role="alertdialog"
+         aria-modal="true"
+         aria-labelledby="my-dialog-title"
+         aria-describedby="my-dialog-content">
+      <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+      <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+     -->Добавить участника<!--
+   --></h2>
+      <div class="mdc-dialog__content" id="my-dialog-content">
+
+        <div class="mdc-form-field-wrapper">
+          <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+            <input type="number" class="mdc-text-field__input" aria-labelledby="ogrn-label" required>
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="ogrn-label">ОГРН</span>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </label>
+          <div class="mdc-text-field-helper-line ">
+            <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent ">Введите ОГРН компании</div>
+          </div>
+          <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+            <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Внимание! Вы не заполнили обязательное поле!</div>
+          </div>
+        </div>
+      </div>
+      <footer class="mdc-dialog__actions">
+        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Отмена</span>
+        </button>
+        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Добавить</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>
+<div class="mdc-fab docs-chat-button" id="docs-chat-button">
+  <div class="mdc-fab__ripple"></div>
+  <span class="mdc-fab__icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+  <span class="mdc-icon-button__alert mdc-icon-button__alert-red">10</span>
+</div>
+<div class="docs-chat" id="docs-chat">
+  <div class="docs-chat-header">
+    <button class="mdc-icon-button" id="docs-chat-close"><ion-icon name="close-outline"></ion-icon></button>
+  </div>
+  <div class="docs-chat-body">
+    <div class="docs-chat-message right">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП).</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message right">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать.</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message left">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП).</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message left">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать.</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message right">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП).</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message right">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать.</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message left">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП).</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+    <div class="docs-chat-message left">
+      <div class="docs-chat-message-body">В разделе "Документы" можно создавать.</div>
+      <div class="docs-chat-message-author"><strong>ООО АлгоритмПлюс</strong> - Петр Васильев</div>
+    </div>
+  </div>
+  <div class="docs-chat-footer">
+    <form action="">
+      <div class="docs-chat-form">
+        <div class="docs-chat-form-message">
+          <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+            <input type="text" class="mdc-text-field__input" aria-labelledby="chat-message-label">
+            <div class="mdc-notched-outline">
+              <div class="mdc-notched-outline__leading"></div>
+              <div class="mdc-notched-outline__notch">
+                  <span class="mdc-floating-label" id="chat-message-label">Сообщение</span>
+              </div>
+              <div class="mdc-notched-outline__trailing"></div>
+            </div>
+          </label>
+        </div>
+        <div class="docs-chat-form-send">
+          <button class="mdc-icon-button" ><ion-icon name="send-outline"></ion-icon></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
