@@ -1,0 +1,46 @@
+
+<% var data = {
+title: "BaseID - Главная",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+      <div class="mdc-typography--headline4">Договор о сотрудничестве № 23132</div>
+      <div class="my-4">
+        <div class="docs-label--small">Кто подписал: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+        <div class="media align-items-center mb-3">
+          <div class="docs-form-party-logo" style="background-color: rgb(19, 79, 92)">A</div>
+          <div class="media-body ml-3">
+            <div class="docs-form-party-company">ООО АлгоритмПлюс</div>
+            <div class="docs-form-party-name">Александр Петров</div>
+          </div>
+        </div>
+        <div class="docs-text--small mb-4">ООО АлгоритПлюс (ИНН 5645645) в лице генерального директора Петренко Юлия Анатольевна 23 апреля 2020 года в 21:56 при помощи секретного кода отправленного на номер +79011234567</div>
+        <div class="media align-items-center mb-3">
+          <div class="docs-form-party-logo" style="background-color: rgb(255, 217, 102)">C</div>
+          <div class="media-body ml-3">
+            <div class="docs-form-party-company">ООО Старт</div>
+            <div class="docs-form-party-name">Александр Петров</div>
+          </div>
+        </div>
+        <div class="docs-text--small mb-4">ООО АлгоритПлюс (ИНН 5645645) в лице генерального директора Петренко Юлия Анатольевна 23 апреля 2020 года в 21:56 при помощи секретного кода отправленного на номер +79011234567</div>
+      </div>
+      <div class="docs-label--small">Текст документа: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+      <div class="ql-content">
+        <p>В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП). Ниже представлены навигационные подразделы, при помощи которых можно быстро найти необходимый документ.</p>
+        <h2>Подзаголовок</h2>
+        <ol>
+          <li>Список 1</li>
+          <li>2</li>
+          <li>3</li>
+        </ol>
+        <p><span class="ql-font-serif">Шрифт </span><sub class="ql-font-serif">фыыв</sub></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -58,12 +58,19 @@ $(function() {
         const fabRipple = new MDCRipple(fab);
     });
 
-    var editor = new Quill('#quill-editor', {
-        modules: {
-            toolbar: '#quill-toolbar'
-        },
-        placeholder: 'Введите текст документа',
-        theme: 'snow'
+    if($('#quill-editor').length > 0){
+        var editor = new Quill('#quill-editor', {
+            modules: {
+                toolbar: '#quill-toolbar'
+            },
+            placeholder: 'Введите текст документа',
+            theme: 'snow'
+        });
+    }
+    document.querySelectorAll( '.ql-content' ).forEach(function (ql_content) {
+        new Quill(ql_content,{
+            readOnly: true,
+        });
     });
     $('#docs-chat-button').on('click', function () {
        $('#docs-chat').addClass('active');

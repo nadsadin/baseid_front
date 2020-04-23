@@ -1,0 +1,63 @@
+
+<% var data = {
+title: "BaseID - Документ подписан",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+      <div class="docs-form-card">
+        <div class="mdc-typography--headline4">Документ подписан!</div>
+        <div class="my-4">
+          <div class="docs-label--small">Что подписали:  <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+          <a href="#" class="docs-link--small">Договор о сотрудничестве № 23132</a>
+        </div>
+        <div class="my-4">
+          <div class="docs-label--small">Контрольная сумма: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+          <div class="docs-text--small">26464645645645</a>
+        </div>
+        <div class="my-4">
+          <div class="docs-label--small">Где размещен документ: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+          <a href="#" class="docs-link--small">https://storage.baseid.org/5534534545645645hgfhf</a>
+        </div>
+        <div class="my-4">
+          <div class="docs-label--small">Кто подписал: <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Подсказка"></ion-icon></div>
+          <div class="media align-items-center mb-3">
+            <div class="docs-form-party-logo" style="background-color: rgb(19, 79, 92)">A</div>
+            <div class="media-body ml-3">
+              <div class="docs-form-party-company">ООО АлгоритмПлюс</div>
+              <div class="docs-form-party-name">Александр Петров</div>
+            </div>
+          </div>
+          <div class="docs-text--small mb-4">ООО АлгоритПлюс (ИНН 5645645) в лице генерального директора Петренко Юлия Анатольевна 23 апреля 2020 года в 21:56 при помощи секретного кода отправленного на номер +79011234567</div>
+          <div class="media align-items-center mb-3">
+            <div class="docs-form-party-logo" style="background-color: rgb(255, 217, 102)">C</div>
+            <div class="media-body ml-3">
+              <div class="docs-form-party-company">ООО Старт</div>
+              <div class="docs-form-party-name">Александр Петров</div>
+            </div>
+          </div>
+          <div class="docs-text--small mb-4">ООО АлгоритПлюс (ИНН 5645645) в лице генерального директора Петренко Юлия Анатольевна 23 апреля 2020 года в 21:56 при помощи секретного кода отправленного на номер +79011234567</div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <a href="#" class="mdc-button mdc-button--unelevated mdc-button--dense-text">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Распечатать</span>
+        </a>
+        <a href="#" class="mdc-button mdc-button--unelevated mdc-button--dense-text">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Ссылка для внешнего доступа</span>
+        </a>
+        <a href="#" class="mdc-button mdc-button--unelevated mdc-button--dense-text">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Сохранить в PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

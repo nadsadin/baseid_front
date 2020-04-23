@@ -104,6 +104,7 @@ $chat-message-radius: 8px;
       &-name{
         font-size: 11px;
         font-weight: 300;
+        color: #5e5e5e;
       }
     }
     &-parties{
@@ -197,6 +198,19 @@ $chat-message-radius: 8px;
         flex-shrink: 0;
       }
     }
+  }
+  &-label--small{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &-link--small{
+    font-size: 11px;
+  }
+  &-text--small{
+    font-size: 11px;
+    font-weight: 300;
+    color: #5e5e5e;
   }
 }
 @media (max-width: 599px) {

@@ -7,8 +7,6 @@
 @use "@material/menu/mdc-menu";
 @use "@material/select/mdc-select";
 @use "@material/typography";
-@import "~quill/dist/quill.core.css";
-@import "~quill/dist/quill.snow.css";
 .w-100{
   width: 100%;
 }
@@ -72,4 +70,17 @@
 }
 .ql-editor{
   @include typography.typography('body1');
+  p, ol, ul{
+    margin-bottom: 16px;
+  }
+  h1, h2, h3, h4, h5, h6{
+    margin-bottom: 24px;
+  }
+}
+.ql-content{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  .ql-editor{
+    padding: 0;
+  }
 }
