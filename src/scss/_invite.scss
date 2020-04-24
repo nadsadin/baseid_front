@@ -1,0 +1,42 @@
+@use "mdc_theme";
+.invite{
+  &-navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #F8F8F8;
+    .mdc-layout-grid{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    &__nav{
+      display: flex;
+      align-items: center;
+    }
+    &__logo{
+      width: 50px;
+      flex-shrink: 0;
+    }
+    &__text{
+      font-size: 12px;
+      font-weight: 300;
+      color: #5e5e5e;
+      margin-left: 16px;
+      margin-right: 16px;
+      flex-shrink: 2;
+    }
+    &__buttons{
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+  }
+}
+@media (max-width: 599px) {
+  .invite {
+    &-navbar {
+      &__text{
+        display: none;
+      }
+    }
+  }
+}
