@@ -5,6 +5,7 @@
     top: 0;
     width: 100%;
     background-color: #F8F8F8;
+    z-index: 1;
     .mdc-layout-grid{
       padding-top: 10px;
       padding-bottom: 10px;
@@ -29,6 +30,72 @@
       margin-left: auto;
       flex-shrink: 0;
     }
+  }
+  &-card{
+    width: 280px;
+    max-width: 100%;
+    padding: 16px;
+    background-color: #F3F3F3;
+    margin-bottom: 24px;
+    margin-right: 12px;
+    margin-left: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    &-wrap{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-right: -12px;
+      margin-left: -12px;
+    }
+    &__title{
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    &__description{
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+  }
+}
+$confirmation-icon-height: 25px;
+$confirmation-width: 200px;
+$confirmation-margin: 12px;
+.confirmation{
+  display: flex;
+  align-items: center;
+  width: $confirmation-width;
+  margin: $confirmation-margin;
+  &-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -1 * $confirmation-margin;
+    margin-right: -1 * $confirmation-margin;
+    margin-bottom: 50px;
+  }
+  &__icon{
+    font-size: $confirmation-icon-height;
+    line-height: $confirmation-icon-height * 1.4143;
+    width: $confirmation-icon-height * 1.4143;
+    height: $confirmation-icon-height * 1.4143;
+    border-radius: 50%;
+    border: 1px solid #5e5e5e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5e5e5e;
+    flex-shrink: 0;
+  }
+  &__text{
+    color: #5e5e5e;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 10px;
   }
 }
 @media (max-width: 599px) {

@@ -1,0 +1,25 @@
+.footer{
+  background-color: #f3f3f3;
+  &-links{
+    text-align: center;
+    margin-bottom: 24px;
+    a{
+      display: inline-block;
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 12px;
+      color: #666666;
+    }
+  }
+  &-text{
+    margin-bottom: 16px;
+    text-align: center;
+    color: #9D9D9D;
+    font-size: 9px;
+    a{
+      display: block;
+      color: #9D9D9D;
+      margin-bottom: 4px;
+    }
+  }
+}

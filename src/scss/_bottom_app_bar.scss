@@ -20,10 +20,16 @@
       color: #888888;
     }
   }
+  &-adjust{
+    padding-bottom: 50px;
+  }
 }
 
 @media (min-width: 840px) {
   .bottom-app-bar{
     display: none;
+    &-adjust{
+      padding-bottom: 0;
+    }
   }
 }

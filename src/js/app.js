@@ -58,13 +58,20 @@ $(function() {
         const fabRipple = new MDCRipple(fab);
     });
 
+    let editor_el = document.getElementById('quill-editor');
     if($('#quill-editor').length > 0){
-        var editor = new Quill('#quill-editor', {
+        var editor = new Quill(editor_el, {
             modules: {
                 toolbar: '#quill-toolbar'
             },
             placeholder: 'Введите текст документа',
             theme: 'snow'
+        });
+        editor_el.editor = editor;
+        editor.on('text-change', function(e) {
+            let editor = document.getElementById('quill-editor').editor;
+            let input = document.getElementById('quill-input');
+            input.value = editor.root.innerHTML;
         });
     }
     document.querySelectorAll( '.ql-content' ).forEach(function (ql_content) {

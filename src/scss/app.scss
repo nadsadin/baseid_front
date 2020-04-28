@@ -1,6 +1,7 @@
 @use "bootstrap";
 @use "mdc_theme";
 @use "typography";
+@use "media";
 @use "navbar";
 @use "drawer";
 @use "top_app_bar";
@@ -16,6 +17,7 @@
 @use "forms";
 @use "invite";
 @use "development";
+@use "footer";
 @import "~quill/dist/quill.core.css";
 @import "~quill/dist/quill.snow.css";
 .test{
