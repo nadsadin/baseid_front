@@ -70,7 +70,7 @@ $(function() {
         editor_el.editor = editor;
         editor.on('text-change', function(e) {
             let editor = document.getElementById('quill-editor').editor;
-            let input = document.getElementById('quill-input');
+            let input = document.getElementById('id_body');
             input.value = editor.root.innerHTML;
         });
     }
