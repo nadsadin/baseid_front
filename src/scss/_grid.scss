@@ -1,9 +1,11 @@
 @use "@material/layout-grid/mdc-layout-grid";
 $grid-x-padding: 120px;
-.mdc-layout-grid{
-  --mdc-layout-grid-margin-desktop: 60px #{$grid-x-padding};
-}
 .mdc-layout-grid--narrow{
   max-width: 650px+$grid-x-padding*2;
   margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .mdc-layout-grid{
+    --mdc-layout-grid-margin-desktop: 60px #{$grid-x-padding};
+  }
 }

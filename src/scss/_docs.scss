@@ -304,3 +304,9 @@ $chat-message-radius: 8px;
 .mdc-dialog__content .mdc-form-field-wrapper{
   margin-top: 16px;
 }
+
+@media (min-width: 1200px) {
+  .my-data-table-wrap .mdc-data-table__table{
+    width: 100%;
+  }
+}
