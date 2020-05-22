@@ -12,6 +12,7 @@ import {MDCChipSet} from '@material/chips';
 import {MDCDataTable} from '@material/data-table';
 import {MDCRipple} from '@material/ripple';
 import {MDCDialog} from '@material/dialog';
+import {MDCMenu} from '@material/menu';
 import Quill from 'quill';
 import './bootstrap';
 import 'popper.js'
@@ -57,6 +58,16 @@ $(function() {
     document.querySelectorAll( '.mdc-fab' ).forEach(function (fab) {
         const fabRipple = new MDCRipple(fab);
     });
+    document.querySelectorAll( '.mdc-menu' ).forEach(function (menu) {
+        menu.mdcMenu = new MDCMenu(menu);
+    });
+    $('#avatar-menu-anchor').on('click', function(){
+        let mdcMenu = $(this).next('.mdc-menu')[0].mdcMenu;
+        if(mdcMenu){
+            mdcMenu.setAnchorCorner(mdc.menuSurface.Corner.BOTTOM_LEFT);
+            mdcMenu.open = !mdcMenu.open;
+        }
+    });
 
     let editor_el = document.getElementById('quill-editor');
     if($('#quill-editor').length > 0){
@@ -91,6 +102,8 @@ $(function() {
         }
         this.MDCDialog.open();
     });
+
+
 });
 
 mdcAutoInit.register('MDCSelect', MDCSelect);
