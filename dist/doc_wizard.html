@@ -257,6 +257,43 @@
                     <div id="quill-editor"></div>
                     <input type="hidden" id="id_body" value=''>
                   </div>
+                  <div class="mdc-form-field-wrapper">
+                    <div class="mdc-select mdc-select--outlined mdc-select--required" data-mdc-auto-init="MDCSelect">
+                      <input type="hidden" name="country" value="" class="my_mdc-select__value" />
+                      <div class="mdc-select__anchor w-100">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text" aria-labelledby="outlined-select-label" aria-required="true"></div>
+                        <div class="mdc-notched-outline">
+                          <div class="mdc-notched-outline__leading"></div>
+                          <div class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label">Выбрать, кем подписывать:</span>
+                          </div>
+                          <div class="mdc-notched-outline__trailing"></div>
+                        </div>
+                      </div>
+
+                      <!-- Other elements from the select remain. -->
+                      <div class="mdc-select__menu mdc-menu mdc-menu-surface w-100" role="listbox">
+                        <ul class="mdc-list">
+                          <li class="mdc-list-item" data-value="1" role="option">
+                            Петров Иван Иванович, физическое лицо
+                          </li>
+                          <li class="mdc-list-item" data-value="2" role="option">
+                            Петров Иван Иванович, физическое лицо
+                          </li>
+                          <li class="mdc-list-item" data-value="3" role="option">
+                            Петров Иван Иванович, физическое лицо
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="mdc-text-field-helper-line ">
+                      <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent " aria-hidden="true">Выберите, кем подписывать:</div>
+                    </div>
+                    <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+                      <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error " aria-hidden="true">Внимание! Вы не заполнили обязательное поле!</div>
+                    </div>
+                  </div>
                   <div class="mdc-form-field-wrapper mt-5">
                     <div class="label-strong">Стороны подписывающие документ <ion-icon name="help-circle-outline" data-toggle="tooltip" data-placement="bottom" title="Добавьте стороны, подписывающие документ"></ion-icon>
                     </div>
