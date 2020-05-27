@@ -20,6 +20,8 @@ import './../img/logo.png';
 import './../img/service_email.png';
 import './../img/service_104.png';
 import './../img/service_105.png';
+import './../img/pechat.png';
+import './../img/podpis.png';
 $(function() {
     console.log('Hello world');
     $('[data-toggle="tooltip"]').tooltip();
