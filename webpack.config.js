@@ -22,9 +22,12 @@ function generateHtmlPlugins(templateDir) {
 const htmlPlugins = generateHtmlPlugins("./src/html/views");
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: {
+        script: './src/js/app.js',
+        landing: './src/js/landing.js'
+    },
     output: {
-        filename: "./js/script.js",
+        filename: "./js/[name].js",
         publicPath: '../',
     },
     devtool: "source-map",
@@ -57,7 +60,7 @@ module.exports = {
               use: [{
                   loader: 'file-loader',
                   options: {
-                      name: 'style.css',
+                      name: '[name].css',
                       outputPath: './css'
                   },
               },{ loader: 'extract-loader'},{

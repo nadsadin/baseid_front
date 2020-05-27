@@ -1,4 +1,4 @@
-import './../scss/app.scss';
+import '../scss/style.scss';
 import * as mdc from 'material-components-web';
 import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCDrawer} from "@material/drawer";
