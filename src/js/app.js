@@ -22,6 +22,7 @@ import './../img/service_104.png';
 import './../img/service_105.png';
 import './../img/pechat.png';
 import './../img/podpis.png';
+import './../img/qr-code.gif';
 $(function() {
     console.log('Hello world');
     $('[data-toggle="tooltip"]').tooltip();
