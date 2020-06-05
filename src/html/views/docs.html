@@ -128,8 +128,10 @@ author: "Nadsadin"
             <thead>
             <tr class="mdc-data-table__header-row">
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Номер" style="width: 100px">Номер</th>
-              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Создан">Создан</th>
-              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Подписан">Подписан</th>
+              <th class="mdc-data-table__header-cell  mdc-data-table__header-cell--with-sort" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Создан">
+                <a href="?doc_created=DESC">Создан <ion-icon name="arrow-up-outline"></ion-icon></a></th>
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Подписан">
+                <a href="?doc_signed=ASC">Подписан <ion-icon name="arrow-down-outline"></ion-icon></a></th>
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Контрагент">Контрагент</th>
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Тема">Тема</th>
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"  data-toggle="tooltip" data-placement="bottom" title="Тип документа" style="width: 130px">Тип документа</th>

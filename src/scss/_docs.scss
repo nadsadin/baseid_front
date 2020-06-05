@@ -239,6 +239,17 @@ $chat-message-radius: 8px;
       width: 100%;
       &__header-row{
         background-color: #e0e0e0;
+        a{
+          color: rgba(0, 0, 0, 0.87);
+          width: 100%;
+          display: inline-block;
+          &:hover{
+            text-decoration: none;
+          }
+          ion-icon{
+            vertical-align: middle;
+          }
+        }
       }
       &__header-cell{
         font-size: .7rem;
