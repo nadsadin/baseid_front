@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>BaseID - Баланс</title>
+</head>
+
+<body class="mdc-typography">
+  <div class="drawer-frame-root">
+    <aside class="mdc-drawer">
+      <div class="mdc-drawer__content">
+        <div class="mdc-drawer__group">
+          <a href="#" class="mdc-drawer__header">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="28" height="28" rx="4" stroke="#1371EC" stroke-width="2" />
+              <path d="M6.16943 19.0557L9.88174 22.768L18.4554 14.1943" stroke="#1371EC" stroke-width="2" />
+            </svg>
+          </a>
+          <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="right" title="Оповещения">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <span class="mdc-icon-button__alert mdc-icon-button__alert-red">10</span>
+          </a>
+          <a href="#" class="mdc-icon-button active" data-toggle="tooltip" data-placement="right" title="Ваши документы">
+            <ion-icon name="documents-outline"></ion-icon>
+          </a>
+          <a href="#" class="mdc-icon-button">
+            <ion-icon name="apps-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="mdc-drawer__group">
+          <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="right" title="Бухгалтерия">
+            <ion-icon name="wallet-outline"></ion-icon>
+          </a>
+          <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="right" title="Настройки">
+            <ion-icon name="settings-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+    <div class="bottom-app-bar">
+      <a href="#" class="mdc-icon-button">
+        <ion-icon name="notifications-outline"></ion-icon>
+        <span class="mdc-icon-button__alert mdc-icon-button__alert-red">10</span>
+      </a>
+      <a href="#" class="mdc-icon-button active">
+        <ion-icon name="documents-outline"></ion-icon>
+      </a>
+      <a href="#" class="mdc-icon-button">
+        <ion-icon name="apps-outline"></ion-icon>
+      </a>
+      <a href="#" class="mdc-icon-button">
+        <ion-icon name="person-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="drawer-frame-app-content">
+      <header id="top-app-bar" class="mdc-top-app-bar mdc-top-app-bar--raised drawer-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="#" class="top-app-bar__back-link mdc-icon-button">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+            <a href="#" class="demo-menu mdc-top-app-bar__navigation-icon mdc-icon-button">
+              <ion-icon name="menu-outline"></ion-icon>
+            </a>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <div class="icon-buttons-wrap ">
+              <a href="#" class="mdc-icon-button" data-toggle="tooltip" data-placement="bottom" title="Поддержка">
+                <ion-icon name="headset-outline"></ion-icon>
+              </a>
+            </div>
+            <div class="top-app-bar__balance" data-toggle="tooltip" data-placement="bottom" title="Баланс">1000 ₽</div>
+            <div class="mdc-menu-surface--anchor">
+              <img src="img/logo.png" alt="" class="avatar-image-circle" id="avatar-menu-anchor">
+              <div class="mdc-menu-surface mdc-menu">
+                <div class="avatar-menu-info">
+                  <div class="avatar-menu-info-name">Иванов И. В.</div>
+                  <div class="avatar-menu-info-details">Физическое лицо</div>
+                  <div class="avatar-menu-info-link"><a href="#">Сменить аккаунт</a></div>
+                </div>
+                <hr>
+                <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                  <li class="mdc-list-item" role="menuitem">
+                    <span class="mdc-list-item__text">Настройки</span>
+                  </li>
+                  <li class="mdc-list-item" role="menuitem">
+                    <span class="mdc-list-item__text">Баланс</span>
+                  </li>
+                  <li class="mdc-list-item" role="menuitem">
+                    <span class="mdc-list-item__text">Выход</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </header>
+      <div class="top-app-bar__scroll-target">
+
+
+
+        <div class="mdc-top-app-bar--fixed-adjust"></div>
+        <div class="mdc-layout-grid">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-12">
+              <div class="mdc-typography--headline4 mb-4">Баланс</div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-12 mb-4">
+              <div class="mdc-chip-set docs-chips  mdc-chip-set--filter" role="grid">
+                <div class="mdc-chip mdc-chip--selected" role="row">
+                  <div class="mdc-chip__ripple"></div>
+                  <span class="mdc-chip__checkmark">
+                    <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                      <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                    </svg>
+                  </span>
+                  <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                      <span class="mdc-chip__text">Все</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="mdc-chip" role="row" id="signed">
+                  <div class="mdc-chip__ripple"></div>
+                  <span class="mdc-chip__checkmark">
+                    <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                      <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                    </svg>
+                  </span>
+                  <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                      <span class="mdc-chip__text">Неоплаченные</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="mdc-chip" role="row" id="unsigned">
+                  <div class="mdc-chip__ripple"></div>
+                  <span class="mdc-chip__checkmark">
+                    <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                      <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                    </svg>
+                  </span>
+                  <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                      <span class="mdc-chip__text">Оплаченные</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="mdc-chip" role="row">
+                  <div class="mdc-chip__ripple"></div>
+                  <span class="mdc-chip__checkmark">
+                    <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                      <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                    </svg>
+                  </span>
+                  <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                      <span class="mdc-chip__text">Просроченные</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="mdc-chip" role="row">
+                  <div class="mdc-chip__ripple"></div>
+                  <span class="mdc-chip__checkmark">
+                    <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                      <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                    </svg>
+                  </span>
+                  <span role="gridcell">
+                    <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                      <span class="mdc-chip__text">Архив</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="mdc-layout-grid__cell--span-12">
+              <div class="my-data-table-wrap">
+                <div class="mdc-data-table">
+                  <table class="mdc-data-table__table" aria-label="Документы">
+                    <thead>
+                      <tr class="mdc-data-table__header-row">
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Номер" style="width: 100px">Номер</th>
+                        <th class="mdc-data-table__header-cell  mdc-data-table__header-cell--with-sort" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Создан">
+                          <a href="?created=DESC">Создан <ion-icon name="arrow-up-outline"></ion-icon></a></th>
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Оплачен">
+                          <a href="?paid_time=ASC">Оплачен <ion-icon name="arrow-down-outline"></ion-icon></a></th>
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Услуга">Услуга</th>
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Статус" style="width: 130px">Статус</th>
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col" data-toggle="tooltip" data-placement="bottom" title="Действия" style="width: 130px">Действия</th>
+                      </tr>
+                    </thead>
+                    <tbody class="mdc-data-table__content">
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--green" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Оплачен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--light-gray" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Не оплачен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--orange" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Просрочен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--green" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Оплачен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--light-gray" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Не оплачен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="43">43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="12.03.2020 21:43">12.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="13.03.2020 21:43">13.03.2020 21:43</td>
+                        <td class="mdc-data-table__cell" data-toggle="tooltip" data-placement="bottom" title="Разработка сайта интернет-магазина детских товаров">
+                          <ion-icon name="pricetag-outline"></ion-icon> Разработка сайта интернет-магазина детских товаров
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <div class="mdc-chip-set" role="grid">
+                            <div class="mdc-chip my-mdc-chip--small my-mdc-chip--orange" role="row">
+                              <span role="gridcell">
+                                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                  <span class="mdc-chip__text">Просрочен</span>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="mdc-data-table__cell">
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray mr-2" data-toggle="tooltip" data-placement="bottom" title="Скачать">
+                            <ion-icon name="document-outline"></ion-icon>
+                          </a>
+                          <a href="#" class="mdc-icon-button mdc-icon-button--small mdc-icon-button--gray" data-toggle="tooltip" data-placement="bottom" title="Оплатить">
+                            <ion-icon name="card-outline"></ion-icon>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="my-data-table__nav">
+                  <div class="my-data-table__nav-text">10-20 из 100</div>
+                  <a href="#" class="mdc-icon-button mr-3">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                  </a>
+                  <a href="#" class="mdc-icon-button">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid-inner">
+              <div class="mdc-layout-grid__cell--span-12">
+                <div class="footer-links">
+                  <a href="#">Главная</a>
+                  <a href="#">Документы</a>
+                  <a href="#">Приложения</a>
+                  <a href="#">Бухгалтерия</a>
+                  <a href="#">Личный кабинет</a>
+                  <a href="#">Помощь</a>
+                </div>
+                <div class="footer-links">
+                  <a href="#">Подпишем.РФ для разработчиков</a>
+                </div>
+                <div class="footer-text">
+                  <a href="#">Политика в отношении обработки персональных данных (версия от 20.04.2020)</a>
+                  <a href="#">Соглашение об электронном взаимодействии (версия от 20.04.2020)</a>
+                  <a href="#">Договор-оферта (версия от 20.04.2020)</a>
+                </div>
+                <div class="footer-text">© 2020. ООО “Центр интернет технологий”
+                  <br>ИНН 9731056862, ОГРН 1197746691812
+                </div>
+                <div class="footer-text">Все права защищены </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-app-bar-adjust"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+</html>

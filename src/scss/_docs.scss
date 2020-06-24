@@ -255,7 +255,7 @@ $chat-message-radius: 8px;
         font-size: .7rem;
       }
       &__cell{
-        ion-icon{
+        > ion-icon{
           vertical-align: middle;
         }
       }
