@@ -1,0 +1,37 @@
+
+<% var data = {
+title: "BaseID - Юридические документы",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-9">
+      <div class="mdc-typography--headline4">Соглашение</div>
+      <div class="ql-content">
+        <p>В разделе "Документы" можно создавать, хранить и подписывать документы при помощи простой электронной подписи (ПЭП). Ниже представлены навигационные подразделы, при помощи которых можно быстро найти необходимый документ.</p>
+        <h2>Подзаголовок</h2>
+        <ol>
+          <li>Список 1</li>
+          <li>2</li>
+          <li>3</li>
+        </ol>
+        <p><span class="ql-font-serif">Шрифт </span><sub class="ql-font-serif">фыыв</sub></p>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-phone">
+      <div class="mdc-typography--headline6">Еще документы</div>
+      <a href="#" class="terms-doc-more hoverable">
+        <span class="terms-doc-more-title">Политика конфиденциальности</span>
+        <div class="terms-doc-more-date">01.01.2020</div>
+      </a>
+      <a href="#" class="terms-doc-more hoverable">
+        <span class="terms-doc-more-title">Политика конфиденциальности</span>
+        <div class="terms-doc-more-date">01.01.2020</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

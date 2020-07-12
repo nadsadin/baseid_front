@@ -1,0 +1,32 @@
+
+<% var data = {
+title: "BaseID - Юридические документы",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+      <div class="mdc-typography--headline4 mb-5">Юридические документы</div>
+      <a href="term_doc.html" class="term-docs-card hoverable">
+        <div class="term-docs-card-title">Соглашение</div>
+        <div class="term-docs-card-date">01.01.2020</div>
+      </a>
+      <a href="term_doc.html" class="term-docs-card hoverable">
+        <div class="term-docs-card-title">Соглашение</div>
+        <div class="term-docs-card-date">01.01.2020</div>
+      </a>
+      <a href="term_doc.html" class="term-docs-card hoverable">
+        <div class="term-docs-card-title">Соглашение</div>
+        <div class="term-docs-card-date">01.01.2020</div>
+      </a>
+      <a href="term_doc.html" class="term-docs-card hoverable">
+        <div class="term-docs-card-title">Соглашение</div>
+        <div class="term-docs-card-date">01.01.2020</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -1,0 +1,43 @@
+.term-docs-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 24px 0;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  &:hover{
+    text-decoration: none;
+  }
+  &-title{
+    color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &-date{
+    font-size: 11px;
+    color: #9F9F9F;
+  }
+}
+.terms-doc-more{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 16px;
+  margin: 32px 0;
+  &:hover{
+    text-decoration: none;
+  }
+  &-title{
+    color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &-date{
+    font-size: 11px;
+    color: #9F9F9F;
+  }
+}
