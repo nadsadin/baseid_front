@@ -260,6 +260,10 @@ $chat-message-radius: 8px;
         }
       }
     }
+    .docs-form-party-logo{
+      display: inline-block;
+      margin-right: 16px;
+    }
   }
   &__link{
     color: #212121;
@@ -319,5 +323,79 @@ $chat-message-radius: 8px;
 @media (min-width: 1200px) {
   .my-data-table-wrap .mdc-data-table__table{
     width: 100%;
+  }
+}
+.doc-sign{
+  &-card{
+    padding: 32px 16px;
+    border: 1px solid rgb(239, 239, 239);
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  &-user{
+    border-radius: 4px;
+    text-align: center;
+    margin: 32px 0;
+    &-avatar{
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      line-height: 40px;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+    &-name{
+      font-weight: 500;
+      margin: 16px auto;
+    }
+    &-details{
+      color: #5e5e5e;
+      font-size: 12px;
+    }
+  }
+  &-with{
+    margin: 52px 0;
+    text-align: center;
+    color: #003CAE;
+  }
+  &-and{
+    margin: 16px 0;
+    text-align: center;
+    color: #003CAE;
+  }
+  &-doc{
+    padding: 16px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    &-title{
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    &-details{
+      font-size: 12px;
+      color: #5e5e5e;
+    }
+    &-buttons{
+      margin-top: 16px;
+    }
+  }
+  &-notice{
+    text-align: center;
+  }
+}
+.mockup-card{
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgb(239, 239, 239);
+  border-radius: 4px;
+  &-title{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  &-details{
+    font-size: 12px;
+    color: #5e5e5e;
   }
 }

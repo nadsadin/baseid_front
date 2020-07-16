@@ -61,6 +61,9 @@ $(function() {
     document.querySelectorAll( '.mdc-fab' ).forEach(function (fab) {
         const fabRipple = new MDCRipple(fab);
     });
+    document.querySelectorAll( '.mdc-button' ).forEach(function (btn) {
+        const btnRipple = new MDCRipple(btn);
+    });
     document.querySelectorAll( '.mdc-menu' ).forEach(function (menu) {
         menu.mdcMenu = new MDCMenu(menu);
     });

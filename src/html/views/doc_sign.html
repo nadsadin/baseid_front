@@ -1,0 +1,88 @@
+
+<% var data = {
+title: "BaseID - Подписать",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-6">
+      <div class="doc-sign-card">
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(255, 217, 102);">П</div>
+          <div class="doc-sign-user-name">Петр Александрович Петренко</div>
+          <div class="doc-sign-user-details">ООО Управдом, ОГРН 122122311</div>
+          <div class="doc-sign-user-details">Сотрудник</div>
+        </div>
+        <div class="doc-sign-with">и</div>
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(238, 238, 238);">О</div>
+          <div class="doc-sign-user-name">Олег Петрович Иванов</div>
+          <div class="doc-sign-user-details">Вы, новый пользователь Подпишем.РФ</div>
+        </div>
+        <div class="doc-sign-doc">
+          <div class="doc-sign-doc-title">Договор № 11214</div>
+          <div class="doc-sign-doc-details">
+            Создан: 12 августа 2020
+            <br>Сумма: 56 780 ₽
+            <br>Статус: Не подписан вами
+          </div>
+          <div class="doc-sign-doc-buttons">
+            <a href="doc.html" class="mdc-button mdc-button--outlined">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Подробнее</span>
+            </a>
+            <a href="#" class="mdc-button mdc-button--unelevated">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Подписать</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-6">
+      <div class="doc-sign-card">
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(255, 217, 102);">П</div>
+          <div class="doc-sign-user-name">Петр Александрович Петренко</div>
+          <div class="doc-sign-user-details">ООО Управдом, ОГРН 122122311</div>
+          <div class="doc-sign-user-details">Сотрудник</div>
+        </div>
+        <div class="doc-sign-and">+</div>
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(255, 217, 102);">П</div>
+          <div class="doc-sign-user-name">Петр Александрович Петренко</div>
+          <div class="doc-sign-user-details">ООО Управдом, ОГРН 122122311</div>
+          <div class="doc-sign-user-details">Сотрудник</div>
+        </div>
+        <div class="doc-sign-with">и</div>
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(246, 178, 107);">О</div>
+          <div class="doc-sign-user-name">Олег Петрович Иванов</div>
+          <div class="doc-sign-user-details">Пользователь Подпишем.РФ</div>
+        </div>
+        <div class="doc-sign-doc">
+          <div class="doc-sign-doc-title">Договор № 11214</div>
+          <div class="doc-sign-doc-details">
+            Создан: 12 августа 2020
+            <br>Сумма: 56 780 ₽
+            <br>Статус: Не подписан вами
+          </div>
+          <div class="doc-sign-doc-buttons">
+            <a href="doc.html" class="mdc-button mdc-button--outlined">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Подробнее</span>
+            </a>
+            <a href="#" class="mdc-button mdc-button--unelevated">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Подписать</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

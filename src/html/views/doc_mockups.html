@@ -1,0 +1,44 @@
+
+<% var data = {
+title: "BaseID - Новый документ по шаблону. Выбор шаблона",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-12">
+      <div class="mdc-typography--headline4 mb-4">Шаблоны документов</div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-4">
+      <div class="mockup-card hoverable">
+        <div class="mockup-card-title">Договор оказания услуг</div>
+        <div class="mockup-card-details">Создан: 12 августа 2020
+          <br>Комментарий: Для стандартных случаев и подписания с физическим лицом.
+        </div>
+        <div class="mt-4">
+          <a href="doc_new_from_mockup.html" class="mdc-button mdc-button--unelevated">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Создать</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-4">
+      <div class="mockup-card hoverable">
+        <div class="mockup-card-title">Акт выполненных работ</div>
+        <div class="mockup-card-details">Создан: 12 августа 2020
+          <br>Комментарий: Для стандартных случаев и подписания с физическим лицом.
+        </div>
+        <div class="mt-4">
+          <a href="doc_new_from_mockup.html" class="mdc-button mdc-button--unelevated">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Создать</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

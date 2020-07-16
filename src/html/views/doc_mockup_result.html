@@ -1,0 +1,47 @@
+
+<% var data = {
+title: "BaseID - Подписать",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-6">
+      <div class="doc-sign-card">
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(238, 238, 238);">О</div>
+          <div class="doc-sign-user-name">Олег Петрович Иванов</div>
+          <div class="doc-sign-user-details">Новый пользователь Подпишем.РФ</div>
+        </div>
+        <div class="doc-sign-notice">Создан личный кабинет нового пользователя</div>
+        <div class="mt-5 text-center">
+          <a href="#" class="mdc-button mdc-button--unelevated">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Далее</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-6">
+      <div class="doc-sign-card">
+        <div class="doc-sign-user">
+          <div class="doc-sign-user-avatar" style="background-color: rgb(246, 178, 107);">О</div>
+          <div class="doc-sign-user-name">Олег Петрович Иванов</div>
+          <div class="doc-sign-user-details">Пользователь Подпишем.РФ</div>
+        </div>
+        <div class="doc-sign-notice">Пользователь уже зарегистрирован в Подпишем.РФ
+          <br><br>Ожидает подтверждения документа.
+        </div>
+        <div class="mt-5 text-center">
+          <a href="#" class="mdc-button mdc-button--unelevated">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Далее</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
