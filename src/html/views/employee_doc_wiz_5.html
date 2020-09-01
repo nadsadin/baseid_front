@@ -1,0 +1,35 @@
+
+<% var data = {
+title: "BaseID - Мастер создания комплекта документов для физического лица. ",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-typography--headline6 text-center mb-3">Поиск физического лица по базе данных</div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="text-small text-muted text-center my-4">Произошла ошибка или физическое лицо
+                с подтвержденным номером телефона
+                +79011234567 не найдено.</div>
+            <div class="text-center mb-4">Нет данных</div>
+            <div class="text-center mb-3">
+                <a href="employee_doc_wiz_4.html" class="mdc-button mdc-button--unelevated w-200">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Создать нового клиента</span>
+                </a>
+            </div>
+            <div class="text-center mb-3">
+                <a href="employee_doc_wiz_4.html" class="mdc-button mdc-button--outlined w-200">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Искать заново</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

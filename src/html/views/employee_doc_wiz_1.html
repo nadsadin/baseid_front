@@ -1,0 +1,37 @@
+
+<% var data = {
+title: "BaseID - Мастер создания комплекта документов для физического лица. ",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-typography--headline6 text-center mb-3">Мастер создания комплекта документов для физического лица. </div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="text-small text-center text-muted mb-4">Вы — Андрей Иванов
+                <br>ООО “Линия Жизни” ОГРН 12345678</div>
+            <div class="text-center mb-4">
+                <a href="employee_doc_wiz_2.html" class="mdc-button mdc-button--unelevated w-200">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Создать Документ</span>
+                </a>
+            </div>
+            <div class="text-center text-muted text-small mb-4"><i>Или сразу выбрать из шаблонов:</i></div>
+            <div class="text-center mb-3">
+                <a href="employee_doc_wiz_3.html">Договор</a>
+            </div>
+            <div class="text-center mb-3">
+                <a href="employee_doc_wiz_3.html">Соглашение</a>
+            </div>
+            <div class="text-center mb-3">
+                <a href="employee_doc_wiz_3.html">Акт</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

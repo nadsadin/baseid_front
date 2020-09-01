@@ -1,0 +1,46 @@
+
+<% var data = {
+title: "BaseID - Мастер создания комплекта документов для физического лица. ",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-typography--headline6 text-center mb-3">Поиск физического лица по базе данных</div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="text-small text-muted text-center my-4">Введите номер мобильного телефона клиента без +7. пробелов и дефисов в десятизначном формате.</div>
+            <div class="mdc-card wizard-card">
+                <div class="phone-wrap">
+                    <div class="phone-code">+7</div>
+                    <div class="phone-input-wrap">
+                        <label class="mdc-text-field mdc-text-field--outlined w-100" data-mdc-auto-init="MDCTextField">
+                            <input type="tel" class="mdc-text-field__input" aria-labelledby="phone-label" required>
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </label>
+                        <div class="mdc-text-field-helper-line ">
+                            <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent "  aria-hidden="true">Например: 9011234567</div>
+                        </div>
+                        <div class="mdc-text-field-helper-line mdc-text-field-helper-line--error">
+                            <div class="mdc-text-field-helper-text mdc-text-field-helper-text--error "  aria-hidden="true">Это поле обязательно к заполнению.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="employee_doc_wiz_5.html" class="mdc-button mdc-button--unelevated w-200">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Найти</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

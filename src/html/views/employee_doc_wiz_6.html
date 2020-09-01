@@ -1,0 +1,27 @@
+
+<% var data = {
+title: "BaseID - Мастер создания комплекта документов для физического лица. ",
+author: "Nadsadin"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="mdc-top-app-bar--fixed-adjust"></div>
+<div class="mdc-layout-grid mdc-layout-grid--narrow">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-typography--headline6 text-center mb-3">Мастер создания нового клиента
+                <br>(физического лица)</div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+
+        </div>
+        <div class="mdc-layout-grid__cell--span-12 mb-4">
+            <div class="mdc-card wizard-card">
+                <div class="text-small text-muted text-center mb-3">Введите имя, отчество и фамилию физического лица, как это указано в гражданском паспорте.</div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -17,6 +17,7 @@ import Quill from 'quill';
 import './bootstrap';
 import 'popper.js'
 import './../img/logo.png';
+import './../img/avatar.png';
 import './../img/service_email.png';
 import './../img/service_104.png';
 import './../img/service_105.png';

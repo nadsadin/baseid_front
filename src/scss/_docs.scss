@@ -389,6 +389,10 @@ $chat-message-radius: 8px;
   background-color: #ffffff;
   border: 1px solid rgb(239, 239, 239);
   border-radius: 4px;
+  display: block;
+  &:hover, &:focus{
+    text-decoration: none;
+  }
   &-title{
     font-size: 22px;
     font-weight: 500;
@@ -397,5 +401,39 @@ $chat-message-radius: 8px;
   &-details{
     font-size: 12px;
     color: #5e5e5e;
+  }
+}
+.wizard{
+  &-card{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 5px rgba(210, 210, 210, 0.25);
+    border-radius: 6px;
+    padding: 32px 24px;
+  }
+}
+.phone{
+  &-wrap{
+    display: flex;
+    align-items: flex-start;
+  }
+  &-input-wrap{
+    flex-grow: 1;
+    input{
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      color: #212121;
+      line-height: 56px;
+    }
+  }
+  &-code{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #212121;
+    line-height: 56px;
+    margin-right: 8px;
   }
 }
